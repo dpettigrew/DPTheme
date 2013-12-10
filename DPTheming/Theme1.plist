@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BoldFontName</key>
+	<string>Avenir Bold</string>
+	<key>RegularFontName</key>
+	<string>Avenir</string>
+	<key>LightFontName</key>
+	<string>Avenir Light</string>
+	<key>ColorSchemeStrongTextColor</key>
+	<dict>
+		<key>red</key>
+		<integer>20</integer>
+		<key>green</key>
+		<integer>20</integer>
+		<key>blue</key>
+		<integer>20</integer>
+		<key>alpha</key>
+		<integer>1</integer>
+	</dict>
+	<key>ColorSchemeMediumTextColor</key>
+	<dict>
+		<key>red</key>
+		<integer>70</integer>
+		<key>green</key>
+		<integer>70</integer>
+		<key>blue</key>
+		<integer>70</integer>
+		<key>alpha</key>
+		<integer>1</integer>
+	</dict>
+	<key>ColorSchemeWeakTextColor</key>
+	<dict>
+		<key>red</key>
+		<integer>140</integer>
+		<key>green</key>
+		<integer>140</integer>
+		<key>blue</key>
+		<integer>140</integer>
+		<key>alpha</key>
+		<integer>1</integer>
+	</dict>
+	<key>ColorSchemeForegroundColor</key>
+	<dict>
+		<key>red</key>
+		<integer>250</integer>
+		<key>green</key>
+		<integer>250</integer>
+		<key>blue</key>
+		<integer>250</integer>
+		<key>alpha</key>
+		<integer>1</integer>
+	</dict>
+	<key>ColorSchemeBackgroundColor</key>
+	<dict>
+		<key>red</key>
+		<integer>215</integer>
+		<key>green</key>
+		<integer>215</integer>
+		<key>blue</key>
+		<integer>215</integer>
+		<key>alpha</key>
+		<integer>1</integer>
+	</dict>
+</dict>
+</plist>
