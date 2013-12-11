@@ -2,12 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>TitleFontSize</key>
+	<integer>20</integer>
+	<key>ExtraExtraLargeFontSize</key>
+	<integer>42</integer>
+	<key>ExtraLargeFontSize</key>
+	<integer>36</integer>
+	<key>LargeFontSize</key>
+	<integer>19</integer>
+	<key>MediumFontSize</key>
+	<integer>16</integer>
+	<key>SmallFontSize</key>
+	<integer>14</integer>
+	<key>ExtraSmallFontSize</key>
+	<integer>12</integer>
 	<key>BoldFontName</key>
-	<string>Avenir Bold</string>
+	<string>Avenir-Heavy</string>
 	<key>RegularFontName</key>
-	<string>Avenir</string>
+	<string>Avenir-Medium</string>
 	<key>LightFontName</key>
-	<string>Avenir Light</string>
+	<string>Avenir-Light</string>
 	<key>ColorSchemeStrongTextColor</key>
 	<dict>
 		<key>red</key>

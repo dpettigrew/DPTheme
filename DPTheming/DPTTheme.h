@@ -21,10 +21,23 @@ typedef struct {
 
 @property (nonatomic, copy) NSString *themeName;
 
-- (UIColor *)backgroundColor;
-- (UIColor *)foregroundColor;
-- (UIColor *)strongTextColor;
-- (UIColor *)mediumTextColor;
-- (UIColor *)weakTextColor;
+@property (readonly) CGFloat extraSmallFontSize;
+@property (readonly) CGFloat smallFontSize;
+@property (readonly) CGFloat mediumFontSize;
+@property (readonly) CGFloat largeFontSize;
+@property (readonly) CGFloat extraLargeFontSize;
+@property (readonly) CGFloat extraExtraLargeFontSize;
+@property (readonly) CGFloat extraExtraExtraLargeFontSize;
+@property (readonly) CGFloat titleFontSize;
+
+@property (nonatomic, copy) NSString *lightFontName;
+@property (nonatomic, copy) NSString *regularFontName;
+@property (nonatomic, copy) NSString *boldFontName;
+
+@property (readonly) UIColor *backgroundColor;
+@property (readonly) UIColor *foregroundColor;
+@property (readonly) UIColor *strongTextColor;
+@property (readonly) UIColor *mediumTextColor;
+@property (readonly) UIColor *weakTextColor;
 
 @end

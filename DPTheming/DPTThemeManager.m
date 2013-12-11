@@ -8,7 +8,7 @@
 
 #import "DPTThemeManager.h"
 #import "DPTViews.h"
-#import "UIFont+Preferred.h"
+#import "UIFont+Theme.h"
 #import "UIColor+ColorScheme.h"
 
 @interface DPTThemeManager () {
@@ -21,27 +21,36 @@
 @implementation DPTThemeManager
 
 #pragma mark
-- (void)setupAppearanceProxies {
-    [[SmallLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kSmallLightFontStyleName]];
-    [[SmallLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kSmallFontStyleName]];
-    [[MediumLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kMediumFontStyleName]];
-    [[MediumBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kMediumBoldFontStyleName]];
-    [[LargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kLargeFontStyleName]];
-    [[LargeLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kLargeLightFontStyleName]];
-    [[LargeBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kLargeBoldFontStyleName]];
-    [[XLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kExtraLargeFontStyleName]];
-    [[XLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kExtraLargeBoldFontStyleName]];
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        [[XXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kExtraExtraExtraLargeFontStyleName]];
-        [[XXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kExtraExtraExtraLargeBoldFontStyleName]];
-    }
-    else {
-        [[LargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kSmallFontStyleName]];
-        [[XXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kExtraExtraLargeFontStyleName]];
-        [[XXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kExtraExtraLargeBoldFontStyleName]];
-    }
-    [[LargeBoldLabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont preferredFontForStyle:kLargeBoldFontStyleName]];
-    [[UITextView appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont preferredFontForStyle:kMediumFontStyleName]];
++ (void)setupAppearanceProxies {
+    // UILabel appearance proxies
+    [[ExtraSmallLightLabel appearance] setFont:[UIFont themeFontForStyle:kExtraSmallLightFontStyleName]];
+    [[ExtraSmallLabel appearance] setFont:[UIFont themeFontForStyle:kExtraSmallFontStyleName]];
+    [[ExtraSmallBoldLabel appearance] setFont:[UIFont themeFontForStyle:kExtraSmallBoldFontStyleName]];
+    [[SmallLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kSmallLightFontStyleName]];
+    [[SmallLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kSmallFontStyleName]];
+    [[MediumLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kMediumFontStyleName]];
+    [[MediumLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kMediumLightFontStyleName]];
+    [[MediumBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kMediumBoldFontStyleName]];
+    [[LargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kLargeFontStyleName]];
+    [[LargeLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kLargeLightFontStyleName]];
+    [[LargeBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kLargeBoldFontStyleName]];
+    [[XLLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kExtraLargeFontStyleName]];
+    [[XLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kExtraLargeFontStyleName]];
+    [[XLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kExtraLargeBoldFontStyleName]];
+    [[LargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kSmallFontStyleName]];
+    [[XXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kExtraExtraLargeFontStyleName]];
+    [[XXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kExtraExtraLargeBoldFontStyleName]];
+    [[LargeBoldLabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont themeFontForStyle:kLargeBoldFontStyleName]];
+    [[TitleLabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont themeFontForStyle:kTitleFontStyleName]];
+
+    // UITextView appearance proxy
+    [[UITextView appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kMediumFontStyleName]];
+}
+
++ (instancetype)createSharedThemeManager:(NSString *)themeName {
+    DPTThemeManager *sharedDPTThemeManager = [DPTThemeManager sharedDPTThemeManager];
+    [sharedDPTThemeManager setDefaultScheme:themeName];
+    return sharedDPTThemeManager;
 }
 
 + (instancetype)sharedDPTThemeManager {
@@ -59,10 +68,6 @@
     self = [super init];
     if (self) {
         _themes = [NSMutableDictionary new];
-        NSString *defaultThemeName = [[NSUserDefaults standardUserDefaults] valueForKey:@"DPTDefaultColorScheme"];
-        if (defaultThemeName) {
-            _defaultTheme = [self getTheme:defaultThemeName];
-        }
     }
     return self;
 }
@@ -82,9 +87,9 @@
 }
 
 - (void)setDefaultScheme:(NSString *)themeName {
-    [[NSUserDefaults standardUserDefaults] setValue:themeName forKey:@"DPTDefaultColorScheme"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     _defaultTheme = [self getTheme:themeName];
+    [DPTThemeManager setupAppearanceProxies];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDPTThemeManagerSchemeChangedNotification object:nil];
 }
 
 - (UIColor *)backgroundColorForTheme:(NSString *)themeName {

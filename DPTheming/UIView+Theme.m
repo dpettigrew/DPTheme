@@ -1,9 +1,9 @@
 //
 //  UIView+Theme.m
-//  NumberPress
+//  DPTheming
 //
 //  Created by David Pettigrew on 5/22/13.
-//  Copyright (c) 2013 LifeCentrics. All rights reserved.
+//  Copyright (c) 2013 David Pettigrew. All rights reserved.
 //
 
 #import "UIView+Theme.h"

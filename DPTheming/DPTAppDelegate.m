@@ -7,12 +7,14 @@
 //
 
 #import "DPTAppDelegate.h"
+#import "DPTThemeManager.h"
 
 @implementation DPTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [DPTThemeManager createSharedThemeManager:@"Theme1"];// initializes theme manager
     return YES;
 }
 							

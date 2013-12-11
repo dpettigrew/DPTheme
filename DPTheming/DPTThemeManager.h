@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "DPTTheme.h"
 
+static NSString * const kDPTThemeManagerSchemeChangedNotification = @"DPTThemeManagerSchemeChangedNotification";
+
 @interface DPTThemeManager : NSObject
 
++ (instancetype)createSharedThemeManager:(NSString *)themeName;
 + (instancetype)sharedDPTThemeManager;
 
 - (UIColor *)backgroundColorForTheme:(NSString *)colorScheme;

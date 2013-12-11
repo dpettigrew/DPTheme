@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6330FEF81857AA45009C3ADB /* DPTLabelTableViewCellViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330FEF71857AA45009C3ADB /* DPTLabelTableViewCellViewCell.m */; };
+		6330FEF91857AA45009C3ADB /* DPTLabelTableViewCellViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330FEF71857AA45009C3ADB /* DPTLabelTableViewCellViewCell.m */; };
+		6330FEFA1857AE64009C3ADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638FE30A18564E42004B2A5F /* Main.storyboard */; };
 		638FE2F918564E42004B2A5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE2F818564E42004B2A5F /* Foundation.framework */; };
 		638FE2FB18564E42004B2A5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE2FA18564E42004B2A5F /* CoreGraphics.framework */; };
 		638FE2FD18564E42004B2A5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE2FC18564E42004B2A5F /* UIKit.framework */; };
 		638FE30318564E42004B2A5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 638FE30118564E42004B2A5F /* InfoPlist.strings */; };
 		638FE30518564E42004B2A5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE30418564E42004B2A5F /* main.m */; };
 		638FE30918564E42004B2A5F /* DPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE30818564E42004B2A5F /* DPTAppDelegate.m */; };
-		638FE30C18564E42004B2A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638FE30A18564E42004B2A5F /* Main.storyboard */; };
 		638FE30F18564E42004B2A5F /* DPTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE30E18564E42004B2A5F /* DPTViewController.m */; };
 		638FE31118564E42004B2A5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638FE31018564E42004B2A5F /* Images.xcassets */; };
 		638FE31818564E43004B2A5F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE31718564E43004B2A5F /* XCTest.framework */; };
@@ -27,8 +29,8 @@
 		638FE33418568ED1004B2A5F /* DPTViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33118568ED1004B2A5F /* DPTViews.m */; };
 		638FE33B18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */; };
 		638FE33C18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */; };
-		638FE33D18568FDC004B2A5F /* UIFont+Preferred.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+Preferred.m */; };
-		638FE33E18568FDC004B2A5F /* UIFont+Preferred.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+Preferred.m */; };
+		638FE33D18568FDC004B2A5F /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+Theme.m */; };
+		638FE33E18568FDC004B2A5F /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+Theme.m */; };
 		638FE33F18568FDC004B2A5F /* UIView+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+Theme.m */; };
 		638FE34018568FDC004B2A5F /* UIView+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+Theme.m */; };
 		638FE34218569504004B2A5F /* Theme1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 638FE34118569504004B2A5F /* Theme1.plist */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6330FEF61857AA45009C3ADB /* DPTLabelTableViewCellViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTLabelTableViewCellViewCell.h; sourceTree = "<group>"; };
+		6330FEF71857AA45009C3ADB /* DPTLabelTableViewCellViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTLabelTableViewCellViewCell.m; sourceTree = "<group>"; };
 		638FE2F518564E42004B2A5F /* DPTheming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DPTheming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638FE2F818564E42004B2A5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		638FE2FA18564E42004B2A5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,8 +77,8 @@
 		638FE33218568ED1004B2A5F /* DPTViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTViews.h; sourceTree = "<group>"; };
 		638FE33518568FDC004B2A5F /* UIColor+ColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorScheme.h"; sourceTree = "<group>"; };
 		638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorScheme.m"; sourceTree = "<group>"; };
-		638FE33718568FDC004B2A5F /* UIFont+Preferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Preferred.h"; sourceTree = "<group>"; };
-		638FE33818568FDC004B2A5F /* UIFont+Preferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Preferred.m"; sourceTree = "<group>"; };
+		638FE33718568FDC004B2A5F /* UIFont+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Theme.h"; sourceTree = "<group>"; };
+		638FE33818568FDC004B2A5F /* UIFont+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Theme.m"; sourceTree = "<group>"; };
 		638FE33918568FDC004B2A5F /* UIView+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Theme.h"; sourceTree = "<group>"; };
 		638FE33A18568FDC004B2A5F /* UIView+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Theme.m"; sourceTree = "<group>"; };
 		638FE34118569504004B2A5F /* Theme1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Theme1.plist; sourceTree = "<group>"; };
@@ -106,6 +110,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6330FEF11857A88E009C3ADB /* Sample app */ = {
+			isa = PBXGroup;
+			children = (
+				638FE30718564E42004B2A5F /* DPTAppDelegate.h */,
+				638FE30818564E42004B2A5F /* DPTAppDelegate.m */,
+				638FE30A18564E42004B2A5F /* Main.storyboard */,
+				638FE30D18564E42004B2A5F /* DPTViewController.h */,
+				638FE30E18564E42004B2A5F /* DPTViewController.m */,
+				638FE31018564E42004B2A5F /* Images.xcassets */,
+				638FE2FF18564E42004B2A5F /* Supporting Files */,
+				6330FEF61857AA45009C3ADB /* DPTLabelTableViewCellViewCell.h */,
+				6330FEF71857AA45009C3ADB /* DPTLabelTableViewCellViewCell.m */,
+			);
+			name = "Sample app";
+			sourceTree = "<group>";
+		};
+		6330FEF21857A8B5009C3ADB /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				638FE32D18564E9E004B2A5F /* DPTThemeManager.h */,
+				638FE32E18564E9E004B2A5F /* DPTThemeManager.m */,
+				638FE33118568ED1004B2A5F /* DPTViews.m */,
+				638FE33218568ED1004B2A5F /* DPTViews.h */,
+				638FE33518568FDC004B2A5F /* UIColor+ColorScheme.h */,
+				638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */,
+				638FE33718568FDC004B2A5F /* UIFont+Theme.h */,
+				638FE33818568FDC004B2A5F /* UIFont+Theme.m */,
+				638FE33918568FDC004B2A5F /* UIView+Theme.h */,
+				638FE33A18568FDC004B2A5F /* UIView+Theme.m */,
+				638FE34118569504004B2A5F /* Theme1.plist */,
+				638FE344185698FE004B2A5F /* DPTTheme.h */,
+				638FE345185698FE004B2A5F /* DPTTheme.m */,
+			);
+			name = Theming;
+			sourceTree = "<group>";
+		};
 		638FE2EC18564E42004B2A5F = {
 			isa = PBXGroup;
 			children = (
@@ -139,26 +179,8 @@
 		638FE2FE18564E42004B2A5F /* DPTheming */ = {
 			isa = PBXGroup;
 			children = (
-				638FE30718564E42004B2A5F /* DPTAppDelegate.h */,
-				638FE30818564E42004B2A5F /* DPTAppDelegate.m */,
-				638FE30A18564E42004B2A5F /* Main.storyboard */,
-				638FE30D18564E42004B2A5F /* DPTViewController.h */,
-				638FE30E18564E42004B2A5F /* DPTViewController.m */,
-				638FE31018564E42004B2A5F /* Images.xcassets */,
-				638FE2FF18564E42004B2A5F /* Supporting Files */,
-				638FE32D18564E9E004B2A5F /* DPTThemeManager.h */,
-				638FE32E18564E9E004B2A5F /* DPTThemeManager.m */,
-				638FE33118568ED1004B2A5F /* DPTViews.m */,
-				638FE33218568ED1004B2A5F /* DPTViews.h */,
-				638FE33518568FDC004B2A5F /* UIColor+ColorScheme.h */,
-				638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */,
-				638FE33718568FDC004B2A5F /* UIFont+Preferred.h */,
-				638FE33818568FDC004B2A5F /* UIFont+Preferred.m */,
-				638FE33918568FDC004B2A5F /* UIView+Theme.h */,
-				638FE33A18568FDC004B2A5F /* UIView+Theme.m */,
-				638FE34118569504004B2A5F /* Theme1.plist */,
-				638FE344185698FE004B2A5F /* DPTTheme.h */,
-				638FE345185698FE004B2A5F /* DPTTheme.m */,
+				6330FEF11857A88E009C3ADB /* Sample app */,
+				6330FEF21857A8B5009C3ADB /* Theming */,
 			);
 			path = DPTheming;
 			sourceTree = "<group>";
@@ -272,7 +294,7 @@
 				638FE31118564E42004B2A5F /* Images.xcassets in Resources */,
 				638FE34218569504004B2A5F /* Theme1.plist in Resources */,
 				638FE30318564E42004B2A5F /* InfoPlist.strings in Resources */,
-				638FE30C18564E42004B2A5F /* Main.storyboard in Resources */,
+				6330FEFA1857AE64009C3ADB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,8 +318,9 @@
 				638FE33B18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */,
 				638FE30518564E42004B2A5F /* main.m in Sources */,
 				638FE30F18564E42004B2A5F /* DPTViewController.m in Sources */,
-				638FE33D18568FDC004B2A5F /* UIFont+Preferred.m in Sources */,
+				638FE33D18568FDC004B2A5F /* UIFont+Theme.m in Sources */,
 				638FE346185698FE004B2A5F /* DPTTheme.m in Sources */,
+				6330FEF81857AA45009C3ADB /* DPTLabelTableViewCellViewCell.m in Sources */,
 				638FE32F18564E9E004B2A5F /* DPTThemeManager.m in Sources */,
 				638FE33318568ED1004B2A5F /* DPTViews.m in Sources */,
 				638FE30918564E42004B2A5F /* DPTAppDelegate.m in Sources */,
@@ -308,9 +331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6330FEF91857AA45009C3ADB /* DPTLabelTableViewCellViewCell.m in Sources */,
 				638FE33C18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */,
 				638FE33018564E9E004B2A5F /* DPTThemeManager.m in Sources */,
-				638FE33E18568FDC004B2A5F /* UIFont+Preferred.m in Sources */,
+				638FE33E18568FDC004B2A5F /* UIFont+Theme.m in Sources */,
 				638FE32418564E43004B2A5F /* DPThemingTests.m in Sources */,
 				638FE347185698FE004B2A5F /* DPTTheme.m in Sources */,
 				638FE34018568FDC004B2A5F /* UIView+Theme.m in Sources */,
@@ -515,6 +539,7 @@
 				638FE32918564E43004B2A5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		638FE32A18564E43004B2A5F /* Build configuration list for PBXNativeTarget "DPThemingTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +548,7 @@
 				638FE32C18564E43004B2A5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
