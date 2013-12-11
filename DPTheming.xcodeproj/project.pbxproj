@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6330FEFA1857AE64009C3ADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638FE30A18564E42004B2A5F /* Main.storyboard */; };
+		6330FF7A1858EF39009C3ADB /* DPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330FF6F1858EF39009C3ADB /* DPTAppDelegate.m */; };
+		6330FF7B1858EF39009C3ADB /* DPTheming-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6330FF701858EF39009C3ADB /* DPTheming-Info.plist */; };
+		6330FF7C1858EF39009C3ADB /* DPTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330FF731858EF39009C3ADB /* DPTViewController.m */; };
+		6330FF7D1858EF39009C3ADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6330FF741858EF39009C3ADB /* InfoPlist.strings */; };
+		6330FF7E1858EF39009C3ADB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6330FF761858EF39009C3ADB /* Images.xcassets */; };
+		6330FF7F1858EF39009C3ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330FF771858EF39009C3ADB /* main.m */; };
+		6330FF801858EF39009C3ADB /* Theme1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6330FF781858EF39009C3ADB /* Theme1.plist */; };
+		6330FF811858EF6F009C3ADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6330FF6C1858EF39009C3ADB /* Main.storyboard */; };
 		638FE2F918564E42004B2A5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE2F818564E42004B2A5F /* Foundation.framework */; };
 		638FE2FB18564E42004B2A5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE2FA18564E42004B2A5F /* CoreGraphics.framework */; };
 		638FE2FD18564E42004B2A5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE2FC18564E42004B2A5F /* UIKit.framework */; };
-		638FE30318564E42004B2A5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 638FE30118564E42004B2A5F /* InfoPlist.strings */; };
-		638FE30518564E42004B2A5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE30418564E42004B2A5F /* main.m */; };
-		638FE30918564E42004B2A5F /* DPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE30818564E42004B2A5F /* DPTAppDelegate.m */; };
-		638FE30F18564E42004B2A5F /* DPTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE30E18564E42004B2A5F /* DPTViewController.m */; };
-		638FE31118564E42004B2A5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638FE31018564E42004B2A5F /* Images.xcassets */; };
 		638FE31818564E43004B2A5F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE31718564E43004B2A5F /* XCTest.framework */; };
 		638FE31918564E43004B2A5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE2F818564E42004B2A5F /* Foundation.framework */; };
 		638FE31A18564E43004B2A5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638FE2FC18564E42004B2A5F /* UIKit.framework */; };
@@ -31,8 +33,6 @@
 		638FE33E18568FDC004B2A5F /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+Theme.m */; };
 		638FE33F18568FDC004B2A5F /* UIView+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+Theme.m */; };
 		638FE34018568FDC004B2A5F /* UIView+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+Theme.m */; };
-		638FE34218569504004B2A5F /* Theme1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 638FE34118569504004B2A5F /* Theme1.plist */; };
-		638FE34318569504004B2A5F /* Theme1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 638FE34118569504004B2A5F /* Theme1.plist */; };
 		638FE346185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 		638FE347185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 /* End PBXBuildFile section */
@@ -48,20 +48,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6330FF6D1858EF39009C3ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6330FF6E1858EF39009C3ADB /* DPTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTAppDelegate.h; sourceTree = "<group>"; };
+		6330FF6F1858EF39009C3ADB /* DPTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTAppDelegate.m; sourceTree = "<group>"; };
+		6330FF701858EF39009C3ADB /* DPTheming-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DPTheming-Info.plist"; sourceTree = "<group>"; };
+		6330FF711858EF39009C3ADB /* DPTheming-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DPTheming-Prefix.pch"; sourceTree = "<group>"; };
+		6330FF721858EF39009C3ADB /* DPTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTViewController.h; sourceTree = "<group>"; };
+		6330FF731858EF39009C3ADB /* DPTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTViewController.m; sourceTree = "<group>"; };
+		6330FF751858EF39009C3ADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6330FF761858EF39009C3ADB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6330FF771858EF39009C3ADB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6330FF781858EF39009C3ADB /* Theme1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Theme1.plist; sourceTree = "<group>"; };
 		638FE2F518564E42004B2A5F /* DPTheming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DPTheming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638FE2F818564E42004B2A5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		638FE2FA18564E42004B2A5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		638FE2FC18564E42004B2A5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		638FE30018564E42004B2A5F /* DPTheming-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DPTheming-Info.plist"; sourceTree = "<group>"; };
-		638FE30218564E42004B2A5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		638FE30418564E42004B2A5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		638FE30618564E42004B2A5F /* DPTheming-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DPTheming-Prefix.pch"; sourceTree = "<group>"; };
-		638FE30718564E42004B2A5F /* DPTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPTAppDelegate.h; sourceTree = "<group>"; };
-		638FE30818564E42004B2A5F /* DPTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPTAppDelegate.m; sourceTree = "<group>"; };
-		638FE30B18564E42004B2A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		638FE30D18564E42004B2A5F /* DPTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPTViewController.h; sourceTree = "<group>"; };
-		638FE30E18564E42004B2A5F /* DPTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPTViewController.m; sourceTree = "<group>"; };
-		638FE31018564E42004B2A5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		638FE31618564E43004B2A5F /* DPThemingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DPThemingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		638FE31718564E43004B2A5F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		638FE31F18564E43004B2A5F /* DPThemingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DPThemingTests-Info.plist"; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		638FE33818568FDC004B2A5F /* UIFont+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Theme.m"; sourceTree = "<group>"; };
 		638FE33918568FDC004B2A5F /* UIView+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Theme.h"; sourceTree = "<group>"; };
 		638FE33A18568FDC004B2A5F /* UIView+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Theme.m"; sourceTree = "<group>"; };
-		638FE34118569504004B2A5F /* Theme1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Theme1.plist; sourceTree = "<group>"; };
 		638FE344185698FE004B2A5F /* DPTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTTheme.h; sourceTree = "<group>"; };
 		638FE345185698FE004B2A5F /* DPTTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTTheme.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,20 +106,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6330FEF11857A88E009C3ADB /* Sample app */ = {
-			isa = PBXGroup;
-			children = (
-				638FE30718564E42004B2A5F /* DPTAppDelegate.h */,
-				638FE30818564E42004B2A5F /* DPTAppDelegate.m */,
-				638FE30A18564E42004B2A5F /* Main.storyboard */,
-				638FE30D18564E42004B2A5F /* DPTViewController.h */,
-				638FE30E18564E42004B2A5F /* DPTViewController.m */,
-				638FE31018564E42004B2A5F /* Images.xcassets */,
-				638FE2FF18564E42004B2A5F /* Supporting Files */,
-			);
-			name = "Sample app";
-			sourceTree = "<group>";
-		};
 		6330FEF21857A8B5009C3ADB /* Theming */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,11 +119,28 @@
 				638FE33818568FDC004B2A5F /* UIFont+Theme.m */,
 				638FE33918568FDC004B2A5F /* UIView+Theme.h */,
 				638FE33A18568FDC004B2A5F /* UIView+Theme.m */,
-				638FE34118569504004B2A5F /* Theme1.plist */,
 				638FE344185698FE004B2A5F /* DPTTheme.h */,
 				638FE345185698FE004B2A5F /* DPTTheme.m */,
 			);
 			name = Theming;
+			sourceTree = "<group>";
+		};
+		6330FF6B1858EF39009C3ADB /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				6330FF6C1858EF39009C3ADB /* Main.storyboard */,
+				6330FF6E1858EF39009C3ADB /* DPTAppDelegate.h */,
+				6330FF6F1858EF39009C3ADB /* DPTAppDelegate.m */,
+				6330FF701858EF39009C3ADB /* DPTheming-Info.plist */,
+				6330FF711858EF39009C3ADB /* DPTheming-Prefix.pch */,
+				6330FF721858EF39009C3ADB /* DPTViewController.h */,
+				6330FF731858EF39009C3ADB /* DPTViewController.m */,
+				6330FF741858EF39009C3ADB /* InfoPlist.strings */,
+				6330FF761858EF39009C3ADB /* Images.xcassets */,
+				6330FF771858EF39009C3ADB /* main.m */,
+				6330FF781858EF39009C3ADB /* Theme1.plist */,
+			);
+			path = Sample;
 			sourceTree = "<group>";
 		};
 		638FE2EC18564E42004B2A5F = {
@@ -173,21 +176,10 @@
 		638FE2FE18564E42004B2A5F /* DPTheming */ = {
 			isa = PBXGroup;
 			children = (
-				6330FEF11857A88E009C3ADB /* Sample app */,
+				6330FF6B1858EF39009C3ADB /* Sample */,
 				6330FEF21857A8B5009C3ADB /* Theming */,
 			);
 			path = DPTheming;
-			sourceTree = "<group>";
-		};
-		638FE2FF18564E42004B2A5F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				638FE30018564E42004B2A5F /* DPTheming-Info.plist */,
-				638FE30118564E42004B2A5F /* InfoPlist.strings */,
-				638FE30418564E42004B2A5F /* main.m */,
-				638FE30618564E42004B2A5F /* DPTheming-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		638FE31D18564E43004B2A5F /* DPThemingTests */ = {
@@ -285,10 +277,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638FE31118564E42004B2A5F /* Images.xcassets in Resources */,
-				638FE34218569504004B2A5F /* Theme1.plist in Resources */,
-				638FE30318564E42004B2A5F /* InfoPlist.strings in Resources */,
-				6330FEFA1857AE64009C3ADB /* Main.storyboard in Resources */,
+				6330FF801858EF39009C3ADB /* Theme1.plist in Resources */,
+				6330FF7E1858EF39009C3ADB /* Images.xcassets in Resources */,
+				6330FF7D1858EF39009C3ADB /* InfoPlist.strings in Resources */,
+				6330FF7B1858EF39009C3ADB /* DPTheming-Info.plist in Resources */,
+				6330FF811858EF6F009C3ADB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				638FE32218564E43004B2A5F /* InfoPlist.strings in Resources */,
-				638FE34318569504004B2A5F /* Theme1.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,13 +302,13 @@
 			files = (
 				638FE33F18568FDC004B2A5F /* UIView+Theme.m in Sources */,
 				638FE33B18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */,
-				638FE30518564E42004B2A5F /* main.m in Sources */,
-				638FE30F18564E42004B2A5F /* DPTViewController.m in Sources */,
 				638FE33D18568FDC004B2A5F /* UIFont+Theme.m in Sources */,
 				638FE346185698FE004B2A5F /* DPTTheme.m in Sources */,
 				638FE32F18564E9E004B2A5F /* DPTThemeManager.m in Sources */,
+				6330FF7C1858EF39009C3ADB /* DPTViewController.m in Sources */,
+				6330FF7A1858EF39009C3ADB /* DPTAppDelegate.m in Sources */,
+				6330FF7F1858EF39009C3ADB /* main.m in Sources */,
 				638FE33318568ED1004B2A5F /* DPTViews.m in Sources */,
-				638FE30918564E42004B2A5F /* DPTAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,20 +337,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		638FE30118564E42004B2A5F /* InfoPlist.strings */ = {
+		6330FF6C1858EF39009C3ADB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				638FE30218564E42004B2A5F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		638FE30A18564E42004B2A5F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				638FE30B18564E42004B2A5F /* Base */,
+				6330FF6D1858EF39009C3ADB /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6330FF741858EF39009C3ADB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6330FF751858EF39009C3ADB /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		638FE32018564E43004B2A5F /* InfoPlist.strings */ = {
@@ -450,8 +442,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DPTheming/DPTheming-Prefix.pch";
-				INFOPLIST_FILE = "DPTheming/DPTheming-Info.plist";
+				GCC_PREFIX_HEADER = "DPTheming/Sample/DPTheming-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/DPTheming/Sample/DPTheming-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -463,8 +455,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DPTheming/DPTheming-Prefix.pch";
-				INFOPLIST_FILE = "DPTheming/DPTheming-Info.plist";
+				GCC_PREFIX_HEADER = "DPTheming/Sample/DPTheming-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/DPTheming/Sample/DPTheming-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
