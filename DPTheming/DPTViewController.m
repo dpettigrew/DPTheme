@@ -7,7 +7,6 @@
 //
 
 #import "DPTViewController.h"
-#import "DPTLabelTableViewCellViewCell.h"
 #import "DPTViews.h"
 
 @interface DPTViewController ()
@@ -20,7 +19,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"LabelCell"];
 }
 
 - (void)didReceiveMemoryWarning

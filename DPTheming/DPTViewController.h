@@ -10,6 +10,4 @@
 
 @interface DPTViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
