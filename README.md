@@ -21,3 +21,5 @@ There are some similar and more powerful approaches out there that are more like
 
 Example showing various themed UILabels.
 
+A limitation is that the UILabel subclasses must be used in Interface Builder only. Using them programmatically doesn't work at the moment.
+
