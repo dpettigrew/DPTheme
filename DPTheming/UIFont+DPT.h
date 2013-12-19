@@ -1,5 +1,5 @@
 //
-//  UIFont+Theme.h
+//  UIFont+DPT.h
 //  DPTheming
 //
 //  Created by David Pettigrew on 6/14/13.

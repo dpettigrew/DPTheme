@@ -1,14 +1,14 @@
 //
-//  UIView+Theme.m
+//  UIView+DPT.m
 //  DPTheming
 //
 //  Created by David Pettigrew on 5/22/13.
 //  Copyright (c) 2013 David Pettigrew. All rights reserved.
 //
 
-#import "UIView+Theme.h"
+#import "UIView+DPT.h"
 #import <QuartzCore/QuartzCore.h>
-#import "UIColor+ColorScheme.h"
+#import "UIColor+DPT.h"
 
 @implementation UIView (Theme)
 

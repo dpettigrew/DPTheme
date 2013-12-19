@@ -8,8 +8,8 @@
 
 #import "DPTThemeManager.h"
 #import "DPTViews.h"
-#import "UIFont+Theme.h"
-#import "UIColor+ColorScheme.h"
+#import "UIFont+DPT.h"
+#import "UIColor+DPT.h"
 
 @interface DPTThemeManager () {
     NSMutableDictionary *_themes;

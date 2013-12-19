@@ -1,5 +1,5 @@
 //
-//  UIView+Theme.h
+//  UIView+DPT.h
 //  DPTheming
 //
 //  Created by David Pettigrew on 5/22/13.

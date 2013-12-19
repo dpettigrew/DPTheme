@@ -1,12 +1,12 @@
 //
-//  UIFont+Theme.m
+//  UIFont+DPT.m
 //  DPTheming
 //
 //  Created by David Pettigrew on 6/14/13.
 //  Copyright (c) 2013 David Pettigrew. All rights reserved.
 //
 
-#import "UIFont+Theme.h"
+#import "UIFont+DPT.h"
 #import "DPTTheme.h"
 #import "DPTThemeManager.h"
 

@@ -1,15 +1,15 @@
 //
-//  UIColor+ColorScheme.m
+//  UIColor+DPTColorScheme.m
 //  DPTheming
 //
 //  Created by David Pettigrew on 5/14/13.
 //  Copyright (c) 2013 David Pettigrew. All rights reserved.
 //
 
-#import "UIColor+ColorScheme.h"
+#import "UIColor+DPT.h"
 #import "DPTThemeManager.h"
 
-@implementation UIColor (ColorScheme)
+@implementation UIColor (DPT)
 
 #pragma mark public messages
 + (UIColor *)backgroundColor {

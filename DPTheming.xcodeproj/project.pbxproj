@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6330FF7A1858EF39009C3ADB /* DPTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330FF6F1858EF39009C3ADB /* DPTAppDelegate.m */; };
-		6330FF7B1858EF39009C3ADB /* DPTheming-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6330FF701858EF39009C3ADB /* DPTheming-Info.plist */; };
 		6330FF7C1858EF39009C3ADB /* DPTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330FF731858EF39009C3ADB /* DPTViewController.m */; };
 		6330FF7D1858EF39009C3ADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6330FF741858EF39009C3ADB /* InfoPlist.strings */; };
 		6330FF7E1858EF39009C3ADB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6330FF761858EF39009C3ADB /* Images.xcassets */; };
@@ -27,12 +26,12 @@
 		638FE33018564E9E004B2A5F /* DPTThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE32E18564E9E004B2A5F /* DPTThemeManager.m */; };
 		638FE33318568ED1004B2A5F /* DPTViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33118568ED1004B2A5F /* DPTViews.m */; };
 		638FE33418568ED1004B2A5F /* DPTViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33118568ED1004B2A5F /* DPTViews.m */; };
-		638FE33B18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */; };
-		638FE33C18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */; };
-		638FE33D18568FDC004B2A5F /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+Theme.m */; };
-		638FE33E18568FDC004B2A5F /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+Theme.m */; };
-		638FE33F18568FDC004B2A5F /* UIView+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+Theme.m */; };
-		638FE34018568FDC004B2A5F /* UIView+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+Theme.m */; };
+		638FE33B18568FDC004B2A5F /* UIColor+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33618568FDC004B2A5F /* UIColor+DPT.m */; };
+		638FE33C18568FDC004B2A5F /* UIColor+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33618568FDC004B2A5F /* UIColor+DPT.m */; };
+		638FE33D18568FDC004B2A5F /* UIFont+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+DPT.m */; };
+		638FE33E18568FDC004B2A5F /* UIFont+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+DPT.m */; };
+		638FE33F18568FDC004B2A5F /* UIView+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+DPT.m */; };
+		638FE34018568FDC004B2A5F /* UIView+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+DPT.m */; };
 		638FE346185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 		638FE347185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 /* End PBXBuildFile section */
@@ -72,12 +71,12 @@
 		638FE32E18564E9E004B2A5F /* DPTThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTThemeManager.m; sourceTree = "<group>"; };
 		638FE33118568ED1004B2A5F /* DPTViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTViews.m; sourceTree = "<group>"; };
 		638FE33218568ED1004B2A5F /* DPTViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTViews.h; sourceTree = "<group>"; };
-		638FE33518568FDC004B2A5F /* UIColor+ColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorScheme.h"; sourceTree = "<group>"; };
-		638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorScheme.m"; sourceTree = "<group>"; };
-		638FE33718568FDC004B2A5F /* UIFont+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Theme.h"; sourceTree = "<group>"; };
-		638FE33818568FDC004B2A5F /* UIFont+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Theme.m"; sourceTree = "<group>"; };
-		638FE33918568FDC004B2A5F /* UIView+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Theme.h"; sourceTree = "<group>"; };
-		638FE33A18568FDC004B2A5F /* UIView+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Theme.m"; sourceTree = "<group>"; };
+		638FE33518568FDC004B2A5F /* UIColor+DPT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DPT.h"; sourceTree = "<group>"; };
+		638FE33618568FDC004B2A5F /* UIColor+DPT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DPT.m"; sourceTree = "<group>"; };
+		638FE33718568FDC004B2A5F /* UIFont+DPT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+DPT.h"; sourceTree = "<group>"; };
+		638FE33818568FDC004B2A5F /* UIFont+DPT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+DPT.m"; sourceTree = "<group>"; };
+		638FE33918568FDC004B2A5F /* UIView+DPT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DPT.h"; sourceTree = "<group>"; };
+		638FE33A18568FDC004B2A5F /* UIView+DPT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DPT.m"; sourceTree = "<group>"; };
 		638FE344185698FE004B2A5F /* DPTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTTheme.h; sourceTree = "<group>"; };
 		638FE345185698FE004B2A5F /* DPTTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTTheme.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,12 +112,12 @@
 				638FE32E18564E9E004B2A5F /* DPTThemeManager.m */,
 				638FE33118568ED1004B2A5F /* DPTViews.m */,
 				638FE33218568ED1004B2A5F /* DPTViews.h */,
-				638FE33518568FDC004B2A5F /* UIColor+ColorScheme.h */,
-				638FE33618568FDC004B2A5F /* UIColor+ColorScheme.m */,
-				638FE33718568FDC004B2A5F /* UIFont+Theme.h */,
-				638FE33818568FDC004B2A5F /* UIFont+Theme.m */,
-				638FE33918568FDC004B2A5F /* UIView+Theme.h */,
-				638FE33A18568FDC004B2A5F /* UIView+Theme.m */,
+				638FE33518568FDC004B2A5F /* UIColor+DPT.h */,
+				638FE33618568FDC004B2A5F /* UIColor+DPT.m */,
+				638FE33718568FDC004B2A5F /* UIFont+DPT.h */,
+				638FE33818568FDC004B2A5F /* UIFont+DPT.m */,
+				638FE33918568FDC004B2A5F /* UIView+DPT.h */,
+				638FE33A18568FDC004B2A5F /* UIView+DPT.m */,
 				638FE344185698FE004B2A5F /* DPTTheme.h */,
 				638FE345185698FE004B2A5F /* DPTTheme.m */,
 			);
@@ -280,7 +279,6 @@
 				6330FF801858EF39009C3ADB /* Theme1.plist in Resources */,
 				6330FF7E1858EF39009C3ADB /* Images.xcassets in Resources */,
 				6330FF7D1858EF39009C3ADB /* InfoPlist.strings in Resources */,
-				6330FF7B1858EF39009C3ADB /* DPTheming-Info.plist in Resources */,
 				6330FF811858EF6F009C3ADB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,9 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638FE33F18568FDC004B2A5F /* UIView+Theme.m in Sources */,
-				638FE33B18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */,
-				638FE33D18568FDC004B2A5F /* UIFont+Theme.m in Sources */,
+				638FE33F18568FDC004B2A5F /* UIView+DPT.m in Sources */,
+				638FE33B18568FDC004B2A5F /* UIColor+DPT.m in Sources */,
+				638FE33D18568FDC004B2A5F /* UIFont+DPT.m in Sources */,
 				638FE346185698FE004B2A5F /* DPTTheme.m in Sources */,
 				638FE32F18564E9E004B2A5F /* DPTThemeManager.m in Sources */,
 				6330FF7C1858EF39009C3ADB /* DPTViewController.m in Sources */,
@@ -316,12 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638FE33C18568FDC004B2A5F /* UIColor+ColorScheme.m in Sources */,
+				638FE33C18568FDC004B2A5F /* UIColor+DPT.m in Sources */,
 				638FE33018564E9E004B2A5F /* DPTThemeManager.m in Sources */,
-				638FE33E18568FDC004B2A5F /* UIFont+Theme.m in Sources */,
+				638FE33E18568FDC004B2A5F /* UIFont+DPT.m in Sources */,
 				638FE32418564E43004B2A5F /* DPThemingTests.m in Sources */,
 				638FE347185698FE004B2A5F /* DPTTheme.m in Sources */,
-				638FE34018568FDC004B2A5F /* UIView+Theme.m in Sources */,
+				638FE34018568FDC004B2A5F /* UIView+DPT.m in Sources */,
 				638FE33418568ED1004B2A5F /* DPTViews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
