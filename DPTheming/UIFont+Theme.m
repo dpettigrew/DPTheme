@@ -12,63 +12,63 @@
 
 @implementation UIFont (Theme)
 
-+ (UIFont *)themeFontForStyle:(FontStyles)styleName {
++ (UIFont *)themeFontForStyle:(DPTFontStyles)styleName {
     UIFont *preferredFont = nil;
-    DPTTheme *defaultTheme = [[DPTThemeManager sharedDPTThemeManager] defaultTheme];
+    DPTTheme *currentTheme = [DPTThemeManager sharedDPTThemeManager].currentTheme;
     switch (styleName) {
-        case kExtraSmallLightFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.lightFontName size:defaultTheme.extraSmallFontSize];
+        case kDPTExtraSmallLightFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.lightFontName size:currentTheme.extraSmallFontSize];
             break;
-        case kExtraSmallFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.regularFontName size:defaultTheme.extraSmallFontSize];
+        case kDPTExtraSmallFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.regularFontName size:currentTheme.extraSmallFontSize];
             break;
-        case kExtraSmallBoldFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.boldFontName size:defaultTheme.extraSmallFontSize];
+        case kDPTExtraSmallBoldFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.boldFontName size:currentTheme.extraSmallFontSize];
             break;
-        case kSmallLightFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.lightFontName size:defaultTheme.smallFontSize];
+        case kDPTSmallLightFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.lightFontName size:currentTheme.smallFontSize];
             break;
-        case kSmallFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.regularFontName size:defaultTheme.smallFontSize];
+        case kDPTSmallFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.regularFontName size:currentTheme.smallFontSize];
             break;
-        case kMediumLightFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.lightFontName size:defaultTheme.mediumFontSize];
+        case kDPTMediumLightFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.lightFontName size:currentTheme.mediumFontSize];
             break;
-        case kMediumFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.regularFontName size:defaultTheme.mediumFontSize];
+        case kDPTMediumFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.regularFontName size:currentTheme.mediumFontSize];
             break;
-        case kMediumBoldFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.boldFontName size:defaultTheme.mediumFontSize];
+        case kDPTMediumBoldFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.boldFontName size:currentTheme.mediumFontSize];
             break;
-        case kLargeFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.regularFontName size:defaultTheme.largeFontSize];
+        case kDPTLargeFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.regularFontName size:currentTheme.largeFontSize];
             break;
-        case kLargeLightFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.lightFontName size:defaultTheme.largeFontSize];
+        case kDPTLargeLightFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.lightFontName size:currentTheme.largeFontSize];
             break;
-        case kLargeBoldFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.boldFontName size:defaultTheme.largeFontSize];
+        case kDPTLargeBoldFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.boldFontName size:currentTheme.largeFontSize];
             break;
-        case kExtraLargeLightFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.lightFontName size:defaultTheme.extraLargeFontSize];
+        case kDPTExtraLargeLightFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.lightFontName size:currentTheme.extraLargeFontSize];
             break;
-        case kExtraLargeFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.regularFontName size:defaultTheme.extraLargeFontSize];
+        case kDPTExtraLargeFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.regularFontName size:currentTheme.extraLargeFontSize];
             break;
-        case kExtraLargeBoldFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.boldFontName size:defaultTheme.extraLargeFontSize];
+        case kDPTExtraLargeBoldFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.boldFontName size:currentTheme.extraLargeFontSize];
             break;
-        case kExtraExtraLargeLightFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.lightFontName size:defaultTheme.extraExtraLargeFontSize];
+        case kDPTExtraExtraLargeLightFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.lightFontName size:currentTheme.extraExtraLargeFontSize];
             break;
-        case kExtraExtraLargeFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.regularFontName size:defaultTheme.extraExtraLargeFontSize];
+        case kDPTExtraExtraLargeFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.regularFontName size:currentTheme.extraExtraLargeFontSize];
             break;
-        case kExtraExtraLargeBoldFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.boldFontName size:defaultTheme.extraExtraLargeFontSize];
+        case kDPTExtraExtraLargeBoldFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.boldFontName size:currentTheme.extraExtraLargeFontSize];
             break;
-        case kTitleFontStyleName:
-            preferredFont = [UIFont fontWithName:defaultTheme.regularFontName size:defaultTheme.titleFontSize];
+        case kDPTTitleFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.regularFontName size:currentTheme.titleFontSize];
             break;
         default:
             NSLog(@"Warning - Unsupported preferred font requested");

@@ -16,14 +16,14 @@ static NSString * const kDPTThemeManagerSchemeChangedNotification = @"DPTThemeMa
 + (instancetype)createSharedThemeManager:(NSString *)themeName;
 + (instancetype)sharedDPTThemeManager;
 
-- (UIColor *)backgroundColorForTheme:(NSString *)colorScheme;
-- (UIColor *)foregroundColorForTheme:(NSString *)colorScheme;
-- (UIColor *)strongTextColorForTheme:(NSString *)colorScheme;
-- (UIColor *)mediumTextColorForTheme:(NSString *)colorScheme;
-- (UIColor *)weakTextColorForTheme:(NSString *)colorScheme;
+- (UIColor *)backgroundColorForTheme:(NSString *)themeName;
+- (UIColor *)foregroundColorForTheme:(NSString *)themeName;
+- (UIColor *)strongTextColorForTheme:(NSString *)themeName;
+- (UIColor *)mediumTextColorForTheme:(NSString *)themeName;
+- (UIColor *)weakTextColorForTheme:(NSString *)themeName;
 
-- (void)setDefaultScheme:(NSString *)themeName;
+- (DPTTheme *)getThemeNamed:(NSString *)themeName;
 
-- (DPTTheme *)defaultTheme;
+@property (nonatomic, strong) DPTTheme *currentTheme;
 
 @end

@@ -8,7 +8,7 @@
 
 #import "DPTViews.h"
 
-@implementation ExtraSmallLightLabel
+@implementation DPTExtraSmallLightLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation ExtraSmallLabel
+@implementation DPTExtraSmallLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation ExtraSmallBoldLabel
+@implementation DPTExtraSmallBoldLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -44,7 +44,7 @@
 
 @end
 
-@implementation SmallLabel
+@implementation DPTSmallLightLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -56,7 +56,7 @@
 
 @end
 
-@implementation SmallLightLabel
+@implementation DPTSmallLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -68,7 +68,7 @@
 
 @end
 
-@implementation SmallBoldLabel
+@implementation DPTSmallBoldLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -80,7 +80,7 @@
 
 @end
 
-@implementation MediumLabel
+@implementation DPTMediumLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -92,7 +92,7 @@
 
 @end
 
-@implementation MediumLightLabel
+@implementation DPTMediumLightLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -104,7 +104,7 @@
 
 @end
 
-@implementation MediumBoldLabel
+@implementation DPTMediumBoldLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -116,7 +116,7 @@
 
 @end
 
-@implementation LargeLabel
+@implementation DPTLargeLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -128,7 +128,7 @@
 
 @end
 
-@implementation LargeLightLabel
+@implementation DPTLargeLightLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -140,7 +140,7 @@
 
 @end
 
-@implementation LargeBoldLabel
+@implementation DPTLargeBoldLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -152,7 +152,7 @@
 
 @end
 
-@implementation XLBoldLabel
+@implementation DPTXLBoldLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -164,7 +164,7 @@
 
 @end
 
-@implementation XLLabel
+@implementation DPTXLLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -176,7 +176,7 @@
 
 @end
 
-@implementation XLLightLabel
+@implementation DPTXLLightLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -188,7 +188,7 @@
 
 @end
 
-@implementation XXLLabel
+@implementation DPTXXLLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -200,7 +200,7 @@
 
 @end
 
-@implementation XXLLightLabel
+@implementation DPTXXLLightLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -212,7 +212,7 @@
 
 @end
 
-@implementation XXLBoldLabel
+@implementation DPTXXLBoldLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -224,7 +224,7 @@
 
 @end
 
-@implementation TitleLabel
+@implementation DPTTitleLabel
 
 - (id)initWithFrame:(CGRect)frame
 {

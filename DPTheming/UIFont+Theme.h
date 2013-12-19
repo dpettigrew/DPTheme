@@ -9,28 +9,28 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    kExtraSmallLightFontStyleName,
-    kExtraSmallFontStyleName,
-    kExtraSmallBoldFontStyleName,
-    kSmallLightFontStyleName,
-    kSmallFontStyleName,
-    kMediumFontStyleName,
-    kMediumLightFontStyleName,
-    kMediumBoldFontStyleName,
-    kLargeFontStyleName,
-    kLargeLightFontStyleName,
-    kLargeBoldFontStyleName,
-    kExtraLargeLightFontStyleName,
-    kExtraLargeFontStyleName,
-    kExtraLargeBoldFontStyleName,
-    kExtraExtraLargeLightFontStyleName,
-    kExtraExtraLargeFontStyleName,
-    kExtraExtraLargeBoldFontStyleName,
-    kTitleFontStyleName,
-} FontStyles;
+    kDPTExtraSmallLightFontStyleName,
+    kDPTExtraSmallFontStyleName,
+    kDPTExtraSmallBoldFontStyleName,
+    kDPTSmallLightFontStyleName,
+    kDPTSmallFontStyleName,
+    kDPTMediumFontStyleName,
+    kDPTMediumLightFontStyleName,
+    kDPTMediumBoldFontStyleName,
+    kDPTLargeFontStyleName,
+    kDPTLargeLightFontStyleName,
+    kDPTLargeBoldFontStyleName,
+    kDPTExtraLargeLightFontStyleName,
+    kDPTExtraLargeFontStyleName,
+    kDPTExtraLargeBoldFontStyleName,
+    kDPTExtraExtraLargeLightFontStyleName,
+    kDPTExtraExtraLargeFontStyleName,
+    kDPTExtraExtraLargeBoldFontStyleName,
+    kDPTTitleFontStyleName,
+} DPTFontStyles;
 
 @interface UIFont (Theme)
 
-+ (UIFont *)themeFontForStyle:(FontStyles)styleName;
++ (UIFont *)themeFontForStyle:(DPTFontStyles)styleName;
 
 @end

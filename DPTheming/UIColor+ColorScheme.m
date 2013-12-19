@@ -13,23 +13,23 @@
 
 #pragma mark public messages
 + (UIColor *)backgroundColor {
-    return [[DPTThemeManager sharedDPTThemeManager].defaultTheme backgroundColor];
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme backgroundColor];
 }
 
 + (UIColor *)foregroundColor {
-    return [[DPTThemeManager sharedDPTThemeManager].defaultTheme foregroundColor];
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme foregroundColor];
 }
 
 + (UIColor *)strongTextColor {
-    return [[DPTThemeManager sharedDPTThemeManager].defaultTheme strongTextColor];
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme strongTextColor];
 }
 
 + (UIColor *)mediumTextColor {
-    return [[DPTThemeManager sharedDPTThemeManager].defaultTheme mediumTextColor];
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme mediumTextColor];
 }
 
 + (UIColor *)weakTextColor {
-    return [[DPTThemeManager sharedDPTThemeManager].defaultTheme weakTextColor];
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme weakTextColor];
 }
 
 @end

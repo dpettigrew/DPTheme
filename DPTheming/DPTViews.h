@@ -12,78 +12,78 @@
 // i.e.     [[UILabel appearanceWhenContainedIn:[BackgroundView class], nil] setFont:[UIFont fontWithName:@"AvenirNext-Regular" size:20]];
 // has the effect of limiting the appearance change to only BackgroundView classes not all UIViews. You would set this as the view's "Custom Class" in Interface Builder.
 
-@interface ExtraSmallLightLabel : UILabel
+@interface DPTExtraSmallLightLabel : UILabel
 
 @end
 
-@interface ExtraSmallLabel : UILabel
+@interface DPTExtraSmallLabel : UILabel
 
 @end
 
-@interface ExtraSmallBoldLabel : UILabel
+@interface DPTExtraSmallBoldLabel : UILabel
 
 @end
 
-@interface SmallLightLabel : UILabel
+@interface DPTSmallLightLabel : UILabel
 
 @end
 
-@interface SmallLabel : UILabel
+@interface DPTSmallLabel : UILabel
 
 @end
 
-@interface SmallBoldLabel : UILabel
+@interface DPTSmallBoldLabel : UILabel
 
 @end
 
-@interface MediumLightLabel : UILabel
+@interface DPTMediumLightLabel : UILabel
 
 @end
 
-@interface MediumLabel : UILabel
+@interface DPTMediumLabel : UILabel
 
 @end
 
-@interface MediumBoldLabel : UILabel
+@interface DPTMediumBoldLabel : UILabel
 
 @end
 
-@interface LargeLabel : UILabel
+@interface DPTLargeLabel : UILabel
 
 @end
 
-@interface LargeLightLabel : UILabel
+@interface DPTLargeLightLabel : UILabel
 
 @end
 
-@interface LargeBoldLabel : UILabel
+@interface DPTLargeBoldLabel : UILabel
 
 @end
 
-@interface XLLabel : UILabel
+@interface DPTXLLabel : UILabel
 
 @end
 
-@interface XLLightLabel : UILabel
+@interface DPTXLLightLabel : UILabel
 
 @end
 
-@interface XLBoldLabel : UILabel
+@interface DPTXLBoldLabel : UILabel
 
 @end
 
-@interface XXLLabel : UILabel
+@interface DPTXXLLabel : UILabel
 
 @end
 
-@interface XXLLightLabel : UILabel
+@interface DPTXXLLightLabel : UILabel
 
 @end
 
-@interface XXLBoldLabel : UILabel
+@interface DPTXXLBoldLabel : UILabel
 
 @end
 
-@interface TitleLabel : UILabel
+@interface DPTTitleLabel : UILabel
 
 @end
