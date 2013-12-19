@@ -30,8 +30,6 @@
 		638FE33C18568FDC004B2A5F /* UIColor+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33618568FDC004B2A5F /* UIColor+DPT.m */; };
 		638FE33D18568FDC004B2A5F /* UIFont+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+DPT.m */; };
 		638FE33E18568FDC004B2A5F /* UIFont+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+DPT.m */; };
-		638FE33F18568FDC004B2A5F /* UIView+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+DPT.m */; };
-		638FE34018568FDC004B2A5F /* UIView+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33A18568FDC004B2A5F /* UIView+DPT.m */; };
 		638FE346185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 		638FE347185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 /* End PBXBuildFile section */
@@ -75,8 +73,6 @@
 		638FE33618568FDC004B2A5F /* UIColor+DPT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DPT.m"; sourceTree = "<group>"; };
 		638FE33718568FDC004B2A5F /* UIFont+DPT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+DPT.h"; sourceTree = "<group>"; };
 		638FE33818568FDC004B2A5F /* UIFont+DPT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+DPT.m"; sourceTree = "<group>"; };
-		638FE33918568FDC004B2A5F /* UIView+DPT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DPT.h"; sourceTree = "<group>"; };
-		638FE33A18568FDC004B2A5F /* UIView+DPT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DPT.m"; sourceTree = "<group>"; };
 		638FE344185698FE004B2A5F /* DPTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTTheme.h; sourceTree = "<group>"; };
 		638FE345185698FE004B2A5F /* DPTTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTTheme.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,8 +112,6 @@
 				638FE33618568FDC004B2A5F /* UIColor+DPT.m */,
 				638FE33718568FDC004B2A5F /* UIFont+DPT.h */,
 				638FE33818568FDC004B2A5F /* UIFont+DPT.m */,
-				638FE33918568FDC004B2A5F /* UIView+DPT.h */,
-				638FE33A18568FDC004B2A5F /* UIView+DPT.m */,
 				638FE344185698FE004B2A5F /* DPTTheme.h */,
 				638FE345185698FE004B2A5F /* DPTTheme.m */,
 			);
@@ -298,7 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638FE33F18568FDC004B2A5F /* UIView+DPT.m in Sources */,
 				638FE33B18568FDC004B2A5F /* UIColor+DPT.m in Sources */,
 				638FE33D18568FDC004B2A5F /* UIFont+DPT.m in Sources */,
 				638FE346185698FE004B2A5F /* DPTTheme.m in Sources */,
@@ -319,7 +312,6 @@
 				638FE33E18568FDC004B2A5F /* UIFont+DPT.m in Sources */,
 				638FE32418564E43004B2A5F /* DPThemingTests.m in Sources */,
 				638FE347185698FE004B2A5F /* DPTTheme.m in Sources */,
-				638FE34018568FDC004B2A5F /* UIView+DPT.m in Sources */,
 				638FE33418568ED1004B2A5F /* DPTViews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

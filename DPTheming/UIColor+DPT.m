@@ -12,23 +12,23 @@
 @implementation UIColor (DPT)
 
 #pragma mark public messages
-+ (UIColor *)backgroundColor {
++ (UIColor *)dptBackgroundColor {
     return [[DPTThemeManager sharedDPTThemeManager].currentTheme backgroundColor];
 }
 
-+ (UIColor *)foregroundColor {
++ (UIColor *)dptForegroundColor {
     return [[DPTThemeManager sharedDPTThemeManager].currentTheme foregroundColor];
 }
 
-+ (UIColor *)strongTextColor {
++ (UIColor *)dptStrongTextColor {
     return [[DPTThemeManager sharedDPTThemeManager].currentTheme strongTextColor];
 }
 
-+ (UIColor *)mediumTextColor {
++ (UIColor *)dptMediumTextColor {
     return [[DPTThemeManager sharedDPTThemeManager].currentTheme mediumTextColor];
 }
 
-+ (UIColor *)weakTextColor {
++ (UIColor *)dptWeakTextColor {
     return [[DPTThemeManager sharedDPTThemeManager].currentTheme weakTextColor];
 }
 

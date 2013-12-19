@@ -10,10 +10,10 @@
 
 @interface UIColor (ColorScheme)
 
-+ (UIColor *)backgroundColor;
-+ (UIColor *)foregroundColor;
-+ (UIColor *)strongTextColor;
-+ (UIColor *)mediumTextColor;
-+ (UIColor *)weakTextColor;
++ (UIColor *)dptBackgroundColor;
++ (UIColor *)dptForegroundColor;
++ (UIColor *)dptStrongTextColor;
++ (UIColor *)dptMediumTextColor;
++ (UIColor *)dptWeakTextColor;
 
 @end
