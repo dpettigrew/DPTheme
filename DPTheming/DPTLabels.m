@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 David Pettigrew All rights reserved.
 //
 
-#import "DPTViews.h"
+#import "DPTLabels.h"
 
 @implementation DPTExtraSmallLightLabel
 

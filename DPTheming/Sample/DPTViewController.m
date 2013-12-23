@@ -7,7 +7,7 @@
 //
 
 #import "DPTViewController.h"
-#import "DPTViews.h"
+#import "DPTLabels.h"
 
 @interface DPTViewController ()
 
