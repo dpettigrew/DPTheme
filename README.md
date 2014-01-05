@@ -35,7 +35,7 @@ Add a call to DPTThemeManager initializeThemeManagerWithThemeNamed in the applic
 	    return YES;
 	}
 
-This will load the theme define in the Theme1.plist file (from the app's main bundle) and steup the appearance proxy objects to use the fonts defined in the theme file for the various labels.
+This will load the theme defined in the Theme1.plist file (from the app's main bundle) and setup the appearance proxy objects to use the fonts and sizes defined in the theme file for the various labels.
 
 Use 
 
@@ -45,7 +45,7 @@ and
 	
 	- (void)setCurrentTheme:(DPTTheme *)theme
 	
-to change the theme at any time. The kDPTThemeManagerSchemeChangedNotification will be posted when the theme changes. Your view controllers can listen for this.
+to change the theme at any time. The kDPTThemeManagerSchemeChangedNotification will be posted when the theme changes. Your view controllers can listen for this and update dynamically.
 
 Labels
 ------
@@ -71,7 +71,7 @@ The following UILabel subclasses are defined:-
 	DPTXXLBoldLabel
 	DPTTitleLabel
 
-Set the Custom Class field in Interface Builder and size the label appropriately based upon your knowledge of the font that you are using in your theme.plist file.
+Set the Custom Class field in Interface Builder and size the label appropriately based upon your knowledge of the font and size that you have in your theme.plist file.
 
 Colors
 ---
@@ -88,3 +88,40 @@ In your code use the following UIColor category methods to color your views:-
 	@end
 
 Generally, you should theme(color) the views during the viewWillAppear method of your controller or when a custom view gets loaded.
+
+Theme File
+---
+The source of the themes are your theme plist files. They are fairly self-explanatory, but here is a sample of a file to give a brief look at it - 
+
+	<key>TitleFontSize</key>
+	<integer>20</integer>
+	<key>ExtraExtraLargeFontSize</key>
+	<integer>42</integer>
+	<key>ExtraLargeFontSize</key>
+	<integer>36</integer>
+	<key>LargeFontSize</key>
+	<integer>19</integer>
+	<key>MediumFontSize</key>
+	<integer>16</integer>
+	<key>SmallFontSize</key>
+	<integer>14</integer>
+	<key>ExtraSmallFontSize</key>
+	<integer>12</integer>
+	<key>BoldFontName</key>
+	<string>Avenir-Heavy</string>
+	<key>RegularFontName</key>
+	<string>Avenir-Medium</string>
+	<key>LightFontName</key>
+	<string>Avenir-Light</string>
+	<key>ColorSchemeStrongTextColor</key>
+	<dict>
+		<key>red</key>
+		<integer>20</integer>
+		<key>green</key>
+		<integer>20</integer>
+		<key>blue</key>
+		<integer>20</integer>
+		<key>alpha</key>
+		<integer>1</integer>
+	</dict>
+Basically, in the file we are defining the font names, the font sizes and the various theme RGB-Alpha colors for the theme in a simple manner.
