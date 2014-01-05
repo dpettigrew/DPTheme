@@ -1,7 +1,7 @@
 DPTheme
 =======
 
-Helps with theming colors and fonts. Sample code included. This code is setracted fro mthe code used in my [Numberpress](https://itunes.apple.com/us/app/numberpress-math-game/id659118210?ls=1&mt=8) app
+Helps with theming colors and fonts. Sample code included. This code is extracted from my [Numberpress](https://itunes.apple.com/us/app/numberpress-math-game/id659118210?ls=1&mt=8) app
 
 The code provides 
 
