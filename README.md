@@ -26,12 +26,12 @@ A limitation is that the UILabel subclasses must be used in Interface Builder on
 Setup
 -----
 
-Add a call to DPTThemeManager initializeThemeManagerWithTheme in the application delegate didFinishLaunchingWithOptions or similar place. e.g.
+Add a call to DPTThemeManager initializeThemeManagerWithThemeNamed in the application delegate didFinishLaunchingWithOptions or similar place. e.g.
 
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 	{
 	    // Override point for customization after application launch.
-	    [DPTThemeManager initializeThemeManagerWithTheme:@"Theme1"];// initializes theme manager
+	    [DPTThemeManager initializeThemeManagerWithThemeNamed:@"Theme1"];// initializes theme manager
 	    return YES;
 	}
 
