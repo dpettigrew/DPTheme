@@ -13,7 +13,7 @@ static NSString * const kDPTThemeManagerSchemeChangedNotification = @"DPTThemeMa
 
 @interface DPTThemeManager : NSObject
 
-+ (instancetype)createSharedThemeManager:(NSString *)themeName;
++ (instancetype)initializeThemeManagerWithTheme:(NSString *)themeName;
 + (instancetype)sharedDPTThemeManager;
 
 - (UIColor *)backgroundColorForTheme:(NSString *)themeName;

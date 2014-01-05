@@ -47,7 +47,7 @@
     [[UITextView appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont themeFontForStyle:kDPTMediumFontStyleName]];
 }
 
-+ (instancetype)createSharedThemeManager:(NSString *)themeName {
++ (instancetype)initializeThemeManagerWithTheme:(NSString *)themeName {
     DPTThemeManager *sharedDPTThemeManager = [DPTThemeManager sharedDPTThemeManager];
     DPTTheme *theme = [sharedDPTThemeManager getThemeNamed:themeName];
     [sharedDPTThemeManager setCurrentTheme:theme];

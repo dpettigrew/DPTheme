@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [DPTThemeManager createSharedThemeManager:@"Theme1"];// initializes theme manager
+    [DPTThemeManager initializeThemeManagerWithTheme:@"Theme1"];// initializes theme manager
     return YES;
 }
 							
