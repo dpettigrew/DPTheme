@@ -10,8 +10,7 @@
 
 @implementation DPTExtraSmallLightLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -22,8 +21,7 @@
 
 @implementation DPTExtraSmallLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -34,8 +32,7 @@
 
 @implementation DPTExtraSmallBoldLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -46,8 +43,7 @@
 
 @implementation DPTSmallLightLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -58,8 +54,7 @@
 
 @implementation DPTSmallLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -70,8 +65,7 @@
 
 @implementation DPTSmallBoldLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -82,8 +76,7 @@
 
 @implementation DPTMediumLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -94,8 +87,7 @@
 
 @implementation DPTMediumLightLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -106,8 +98,7 @@
 
 @implementation DPTMediumBoldLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -118,8 +109,7 @@
 
 @implementation DPTLargeLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -130,8 +120,7 @@
 
 @implementation DPTLargeLightLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -142,8 +131,7 @@
 
 @implementation DPTLargeBoldLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -154,8 +142,7 @@
 
 @implementation DPTXLBoldLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -166,8 +153,7 @@
 
 @implementation DPTXLLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -178,8 +164,7 @@
 
 @implementation DPTXLLightLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -190,8 +175,7 @@
 
 @implementation DPTXXLLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -202,8 +186,7 @@
 
 @implementation DPTXXLLightLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -214,8 +197,7 @@
 
 @implementation DPTXXLBoldLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
@@ -226,8 +208,7 @@
 
 @implementation DPTTitleLabel
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
     }
