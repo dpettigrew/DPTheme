@@ -29,6 +29,8 @@ typedef enum {
     kDPTTitleFontStyleName,
 } DPTFontStyles;
 
+// TODO Add support for italics
+
 @interface UIFont (Theme)
 
 + (UIFont *)dptThemeFontForStyle:(DPTFontStyles)styleName;
