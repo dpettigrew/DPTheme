@@ -32,4 +32,12 @@
     return [[DPTThemeManager sharedDPTThemeManager].currentTheme weakTextColor];
 }
 
++ (UIColor *)dptBarTintColor {
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme barTintColor];
+}
+
++ (UIColor *)dptTintColor {
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme tintColor];
+}
+
 @end

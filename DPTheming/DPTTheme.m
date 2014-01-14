@@ -38,88 +38,103 @@
     return rgba;
 }
 
+#pragma mark Standard colors
 - (UIColor *)backgroundColor {
-    NSDictionary *colorDict = _dictionary[@"ColorSchemeBackgroundColor"];
+    NSDictionary *colorDict = _dictionary[kColorSchemeBackgroundColor];
     RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
     return [self colorWithRGBAColor:rgba];
 }
 
 - (UIColor *)foregroundColor {
-    NSDictionary *colorDict = _dictionary[@"ColorSchemeForegroundColor"];
+    NSDictionary *colorDict = _dictionary[kColorSchemeForegroundColor];
     RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
     return [self colorWithRGBAColor:rgba];
 }
 
 - (UIColor *)strongTextColor {
-    NSDictionary *colorDict = _dictionary[@"ColorSchemeStrongTextColor"];
+    NSDictionary *colorDict = _dictionary[kColorSchemeStrongTextColor];
     RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
     return [self colorWithRGBAColor:rgba];
 }
 
 - (UIColor *)mediumTextColor {
-    NSDictionary *colorDict = _dictionary[@"ColorSchemeMediumTextColor"];
+    NSDictionary *colorDict = _dictionary[kColorSchemeMediumTextColor];
     RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
     return [self colorWithRGBAColor:rgba];
 }
 
 - (UIColor *)weakTextColor {
-    NSDictionary *colorDict = _dictionary[@"ColorSchemeWeakTextColor"];
+    NSDictionary *colorDict = _dictionary[kColorSchemeWeakTextColor];
     RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
     return [self colorWithRGBAColor:rgba];
 }
 
+- (UIColor *)barTintColor {
+    NSDictionary *colorDict = _dictionary[kColorSchemeBarTintColor];
+    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
+    return [self colorWithRGBAColor:rgba];
+}
+
+- (UIColor *)tintColor {
+    NSDictionary *colorDict = _dictionary[kColorSchemeTintColor];
+    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
+    return [self colorWithRGBAColor:rgba];
+}
+
+#pragma mark Font sizes
 - (CGFloat) extraSmallFontSize {
-    NSNumber *fontSize = _dictionary[@"ExtraSmallFontSize"];
+    NSNumber *fontSize = _dictionary[kExtraSmallFontSize];
     return fontSize.floatValue;
 }
 
 - (CGFloat) smallFontSize {
-    NSNumber *fontSize = _dictionary[@"SmallFontSize"];
+    NSNumber *fontSize = _dictionary[kSmallFontSize];
     return fontSize.floatValue;
 }
 
 - (CGFloat) mediumFontSize {
-    NSNumber *fontSize = _dictionary[@"MediumFontSize"];
+    NSNumber *fontSize = _dictionary[kMediumFontSize];
     return fontSize.floatValue;
 }
 
 - (CGFloat) largeFontSize {
-    NSNumber *fontSize = _dictionary[@"LargeFontSize"];
+    NSNumber *fontSize = _dictionary[kLargeFontSize];
     return fontSize.floatValue;
 }
 
 - (CGFloat) extraLargeFontSize {
-    NSNumber *fontSize = _dictionary[@"ExtraLargeFontSize"];
+    NSNumber *fontSize = _dictionary[kExtraLargeFontSize];
     return fontSize.floatValue;
 }
 
 - (CGFloat) extraExtraLargeFontSize {
-    NSNumber *fontSize = _dictionary[@"ExtraExtraLargeFontSize"];
+    NSNumber *fontSize = _dictionary[kExtraExtraLargeFontSize];
     return fontSize.floatValue;
 }
 
 - (CGFloat) extraExtraExtraLargeFontSize {
-    NSNumber *fontSize = _dictionary[@"ExtraExtraExtraLargeFontSize"];
+    NSNumber *fontSize = _dictionary[kExtraExtraExtraLargeFontSize];
     return fontSize.floatValue;
 }
 
 - (CGFloat) titleFontSize {
-    NSNumber *fontSize = _dictionary[@"TitleFontSize"];
+    NSNumber *fontSize = _dictionary[kTitleFontSize];
     return fontSize.floatValue;
 }
 
+#pragma mark Font names
 - (NSString *)lightFontName {
-    NSString *fontName = _dictionary[@"LightFontName"];
+    NSString *fontName = _dictionary[kLightFontName];
     return fontName;
 }
 
 - (NSString *)regularFontName {
-    NSString *fontName = _dictionary[@"RegularFontName"];
+    NSString *fontName = _dictionary[kRegularFontName];
     return fontName;
 }
 
 - (NSString *)boldFontName {
-    NSString *fontName = _dictionary[@"BoldFontName"];
+    NSString *fontName = _dictionary[kBoldFontName];
     return fontName;
 }
 

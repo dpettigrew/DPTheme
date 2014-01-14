@@ -12,7 +12,7 @@
 
 @implementation UIFont (Theme)
 
-+ (UIFont *)themeFontForStyle:(DPTFontStyles)styleName {
++ (UIFont *)dptThemeFontForStyle:(DPTFontStyles)styleName {
     UIFont *preferredFont = nil;
     DPTTheme *currentTheme = [DPTThemeManager sharedDPTThemeManager].currentTheme;
     switch (styleName) {

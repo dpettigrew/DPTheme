@@ -15,5 +15,7 @@
 + (UIColor *)dptStrongTextColor;
 + (UIColor *)dptMediumTextColor;
 + (UIColor *)dptWeakTextColor;
++ (UIColor *)dptBarTintColor;
++ (UIColor *)dptTintColor;
 
 @end

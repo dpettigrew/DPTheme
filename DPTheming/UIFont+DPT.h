@@ -31,6 +31,6 @@ typedef enum {
 
 @interface UIFont (Theme)
 
-+ (UIFont *)themeFontForStyle:(DPTFontStyles)styleName;
++ (UIFont *)dptThemeFontForStyle:(DPTFontStyles)styleName;
 
 @end
