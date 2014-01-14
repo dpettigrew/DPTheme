@@ -46,15 +46,33 @@
     // UITextView appearance proxy
     [[UITextView appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumFontStyleName]];
 
-    [[UINavigationBar appearance] setBarTintColor:[UIColor dptBarTintColor]];
-    
-    [[UINavigationBar appearance] setTintColor:[UIColor dptTintColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:
-     [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIColor dptTintColor], NSForegroundColorAttributeName,
-      [UIColor dptBarTintColor], NSBackgroundColorAttributeName,
-      [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName], NSFontAttributeName,
-      nil]];
+    [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor dptTintColor]];
+    [[UISegmentedControl appearance] setTintColor:[UIColor dptTintColor]];
+
+    NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
+    if ([systemVersion compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) // before iOS 7
+    {
+        [[UINavigationBar appearance] setTintColor:[UIColor dptBarTintColor]];
+        [[UINavigationBar appearance] setTitleTextAttributes:
+         [NSDictionary dictionaryWithObjectsAndKeys:
+          [UIColor dptTintColor], NSForegroundColorAttributeName,
+          [UIColor dptBarTintColor], NSBackgroundColorAttributeName,
+          [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName], NSFontAttributeName,
+          [UIColor dptTintColor], UITextAttributeTextShadowColor,
+          [NSValue valueWithUIOffset:UIOffsetMake(0, -1)], UITextAttributeTextShadowOffset,
+          nil]];
+    }
+    else { // iOS 7 and later
+        [[UINavigationBar appearance] setBarTintColor:[UIColor dptBarTintColor]];
+        [[UINavigationBar appearance] setTintColor:[UIColor dptTintColor]];
+        [[UINavigationBar appearance] setTitleTextAttributes:
+         [NSDictionary dictionaryWithObjectsAndKeys:
+          [UIColor dptTintColor], NSForegroundColorAttributeName,
+          [UIColor dptBarTintColor], NSBackgroundColorAttributeName,
+          [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName], NSFontAttributeName,
+          nil]];
+    }
 }
 
 + (instancetype)initializeThemeManagerWithThemeNamed:(NSString *)themeName {
