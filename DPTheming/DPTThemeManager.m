@@ -37,7 +37,7 @@
     [[DPTXLLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName]];
     [[DPTXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName]];
     [[DPTXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeBoldFontStyleName]];
-    [[DPTLargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTSmallFontStyleName]];
+    [[DPTLargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeFontStyleName]];
     [[DPTXXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraExtraLargeFontStyleName]];
     [[DPTXXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraExtraLargeBoldFontStyleName]];
     [[DPTLargeBoldLabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName]];
