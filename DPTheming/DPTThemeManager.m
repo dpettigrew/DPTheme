@@ -45,14 +45,16 @@
 
     // UITextView appearance proxy
     [[UITextView appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumFontStyleName]];
+    [[UITextView appearanceWhenContainedIn:[UIView class], nil] setBackgroundColor:[UIColor dptBackgroundColor]];
+    [[UITextView appearanceWhenContainedIn:[UIView class], nil] setTextColor:[UIColor dptStrongTextColor]];
 
-    [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
     [[UIBarButtonItem appearance] setTintColor:[UIColor dptTintColor]];
     [[UISegmentedControl appearance] setTintColor:[UIColor dptTintColor]];
 
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
     if ([systemVersion compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) // before iOS 7
     {
+        [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
         [[UINavigationBar appearance] setTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
@@ -64,6 +66,8 @@
           nil]];
     }
     else { // iOS 7 and later
+        [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
+        [[UIToolbar appearance] setBarTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setBarTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setTintColor:[UIColor dptTintColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:
