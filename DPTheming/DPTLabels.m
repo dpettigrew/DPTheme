@@ -7,6 +7,7 @@
 //
 
 #import "DPTLabels.h"
+#import "UIFont+DPT.h"
 
 @implementation DPTExtraSmallLightLabel
 
