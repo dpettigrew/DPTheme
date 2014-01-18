@@ -22,31 +22,10 @@
 
 #pragma mark
 + (void)setupAppearanceProxies {
-    // UILabel appearance proxies
-    [[DPTExtraSmallLabel appearance] setFont:[UIFont dptThemeFontForStyle:kDPTExtraSmallLightFontStyleName]];
-    [[DPTExtraSmallLabel appearance] setFont:[UIFont dptThemeFontForStyle:kDPTExtraSmallFontStyleName]];
-    [[DPTExtraSmallBoldLabel appearance] setFont:[UIFont dptThemeFontForStyle:kDPTExtraSmallBoldFontStyleName]];
-    [[DPTSmallLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTSmallLightFontStyleName]];
-    [[DPTSmallLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTSmallFontStyleName]];
-    [[DPTMediumLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumFontStyleName]];
-    [[DPTMediumLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumLightFontStyleName]];
-    [[DPTMediumBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumBoldFontStyleName]];
-    [[DPTLargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeFontStyleName]];
-    [[DPTLargeLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeLightFontStyleName]];
-    [[DPTLargeBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName]];
-    [[DPTXLLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName]];
-    [[DPTXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName]];
-    [[DPTXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeBoldFontStyleName]];
-    [[DPTLargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeFontStyleName]];
-    [[DPTXXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraExtraLargeFontStyleName]];
-    [[DPTXXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraExtraLargeBoldFontStyleName]];
-    [[DPTLargeBoldLabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName]];
-    [[DPTTitleLabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTTitleFontStyleName]];
-
     // UITextView appearance proxy
-    [[UITextView appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumFontStyleName]];
-    [[UITextView appearanceWhenContainedIn:[UIView class], nil] setBackgroundColor:[UIColor dptBackgroundColor]];
-    [[UITextView appearanceWhenContainedIn:[UIView class], nil] setTextColor:[UIColor dptStrongTextColor]];
+    [[UITextView appearance] setFont:[UIFont dptThemeFontForStyle:kDPTMediumFontStyleName]];
+    [[UITextView appearance] setBackgroundColor:[UIColor dptBackgroundColor]];
+    [[UITextView appearance] setTextColor:[UIColor dptStrongTextColor]];
 
     [[UIBarButtonItem appearance] setTintColor:[UIColor dptTintColor]];
     [[UISegmentedControl appearance] setTintColor:[UIColor dptTintColor]];

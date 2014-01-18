@@ -14,6 +14,7 @@ typedef enum {
     kDPTExtraSmallBoldFontStyleName,
     kDPTSmallLightFontStyleName,
     kDPTSmallFontStyleName,
+    kDPTSmallBoldFontStyleName,
     kDPTMediumFontStyleName,
     kDPTMediumLightFontStyleName,
     kDPTMediumBoldFontStyleName,

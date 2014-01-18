@@ -13,6 +13,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallLightFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallLightFontStyleName];
     }
     return self;
 }
@@ -24,6 +33,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallFontStyleName];
     }
     return self;
 }
@@ -35,6 +53,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallBoldFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallBoldFontStyleName];
     }
     return self;
 }
@@ -46,6 +73,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallLightFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallLightFontStyleName];
     }
     return self;
 }
@@ -57,6 +93,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallFontStyleName];
     }
     return self;
 }
@@ -68,6 +113,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallBoldFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallBoldFontStyleName];
     }
     return self;
 }
@@ -79,6 +133,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumFontStyleName];
     }
     return self;
 }
@@ -90,6 +153,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumLightFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumLightFontStyleName];
     }
     return self;
 }
@@ -101,6 +173,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumBoldFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumBoldFontStyleName];
     }
     return self;
 }
@@ -112,6 +193,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeFontStyleName];
     }
     return self;
 }
@@ -123,6 +213,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeLightFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeLightFontStyleName];
     }
     return self;
 }
@@ -134,6 +233,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName];
     }
     return self;
 }
@@ -145,6 +253,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeBoldFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeBoldFontStyleName];
     }
     return self;
 }
@@ -156,6 +273,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName];
     }
     return self;
 }
@@ -167,6 +293,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeLightFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeLightFontStyleName];
     }
     return self;
 }
@@ -178,6 +313,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeFontStyleName];
     }
     return self;
 }
@@ -189,6 +333,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeLightFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeLightFontStyleName];
     }
     return self;
 }
@@ -200,6 +353,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeBoldFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeBoldFontStyleName];
     }
     return self;
 }
@@ -211,6 +373,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTTitleFontStyleName];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTTitleFontStyleName];
     }
     return self;
 }
