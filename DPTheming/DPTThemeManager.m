@@ -29,6 +29,7 @@
 
     [[UIBarButtonItem appearance] setTintColor:[UIColor dptTintColor]];
     [[UISegmentedControl appearance] setTintColor:[UIColor dptTintColor]];
+    [[UIButton appearance] setTitleColor:[UIColor dptTintColor] forState:UIControlStateNormal];
 
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
     if ([systemVersion compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) // before iOS 7
