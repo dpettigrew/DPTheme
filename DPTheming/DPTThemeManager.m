@@ -53,7 +53,6 @@
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
     if ([systemVersion compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) // before iOS 7
     {
-        [[UINavigationBar appearance] setTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
           [UIColor dptTintColor], NSForegroundColorAttributeName,
