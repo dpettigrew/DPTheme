@@ -31,6 +31,9 @@
         case kDPTSmallFontStyleName:
             preferredFont = [UIFont fontWithName:currentTheme.regularFontName size:currentTheme.smallFontSize];
             break;
+        case kDPTSmallBoldFontStyleName:
+            preferredFont = [UIFont fontWithName:currentTheme.boldFontName size:currentTheme.smallFontSize];
+            break;
         case kDPTMediumLightFontStyleName:
             preferredFont = [UIFont fontWithName:currentTheme.lightFontName size:currentTheme.mediumFontSize];
             break;

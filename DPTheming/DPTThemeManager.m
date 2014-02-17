@@ -22,37 +22,19 @@
 
 #pragma mark
 + (void)setupAppearanceProxies {
-    // UILabel appearance proxies
-    [[DPTExtraSmallLabel appearance] setFont:[UIFont dptThemeFontForStyle:kDPTExtraSmallLightFontStyleName]];
-    [[DPTExtraSmallLabel appearance] setFont:[UIFont dptThemeFontForStyle:kDPTExtraSmallFontStyleName]];
-    [[DPTExtraSmallBoldLabel appearance] setFont:[UIFont dptThemeFontForStyle:kDPTExtraSmallBoldFontStyleName]];
-    [[DPTSmallLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTSmallLightFontStyleName]];
-    [[DPTSmallLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTSmallFontStyleName]];
-    [[DPTMediumLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumFontStyleName]];
-    [[DPTMediumLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumLightFontStyleName]];
-    [[DPTMediumBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumBoldFontStyleName]];
-    [[DPTLargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeFontStyleName]];
-    [[DPTLargeLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeLightFontStyleName]];
-    [[DPTLargeBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName]];
-    [[DPTXLLightLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName]];
-    [[DPTXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName]];
-    [[DPTXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraLargeBoldFontStyleName]];
-    [[DPTLargeLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTSmallFontStyleName]];
-    [[DPTXXLLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraExtraLargeFontStyleName]];
-    [[DPTXXLBoldLabel appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTExtraExtraLargeBoldFontStyleName]];
-    [[DPTLargeBoldLabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName]];
-    [[DPTTitleLabel appearanceWhenContainedIn:[UIButton class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTTitleFontStyleName]];
-
     // UITextView appearance proxy
-    [[UITextView appearanceWhenContainedIn:[UIView class], nil] setFont:[UIFont dptThemeFontForStyle:kDPTMediumFontStyleName]];
+    [[UITextView appearance] setFont:[UIFont dptThemeFontForStyle:kDPTMediumFontStyleName]];
+    [[UITextView appearance] setBackgroundColor:[UIColor dptBackgroundColor]];
+    [[UITextView appearance] setTextColor:[UIColor dptStrongTextColor]];
 
-    [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
     [[UIBarButtonItem appearance] setTintColor:[UIColor dptTintColor]];
     [[UISegmentedControl appearance] setTintColor:[UIColor dptTintColor]];
+    [[UIButton appearance] setTitleColor:[UIColor dptTintColor] forState:UIControlStateNormal];
 
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
     if ([systemVersion compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) // before iOS 7
     {
+        [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
           [UIColor dptTintColor], NSForegroundColorAttributeName,
@@ -63,6 +45,8 @@
           nil]];
     }
     else { // iOS 7 and later
+        [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
+        [[UIToolbar appearance] setBarTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setBarTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setTintColor:[UIColor dptTintColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:

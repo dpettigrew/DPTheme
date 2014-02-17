@@ -7,12 +7,26 @@
 //
 
 #import "DPTLabels.h"
+#import "UIFont+DPT.h"
 
 @implementation DPTExtraSmallLightLabel
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -24,6 +38,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -35,6 +62,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraSmallBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -46,6 +86,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -57,6 +110,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -68,6 +134,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTSmallBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -79,6 +158,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -90,6 +182,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -101,6 +206,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTMediumBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -112,6 +230,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -123,6 +254,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -134,6 +278,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -145,6 +302,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -156,6 +326,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -167,6 +350,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraLargeLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -178,6 +374,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -189,6 +398,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeLightFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -200,6 +422,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTExtraExtraLargeBoldFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }
@@ -211,6 +446,19 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTTitleFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.font = [UIFont dptThemeFontForStyle:kDPTTitleFontStyleName];
+        self.textColor = [UIColor dptStrongTextColor];
+        self.backgroundColor = [UIColor dptBackgroundColor];
     }
     return self;
 }

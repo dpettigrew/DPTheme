@@ -32,6 +32,7 @@
 		638FE33E18568FDC004B2A5F /* UIFont+DPT.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE33818568FDC004B2A5F /* UIFont+DPT.m */; };
 		638FE346185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 		638FE347185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
+		63D7C1F0188A02E0001AA88A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63D7C1EF188A02E0001AA88A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		638FE33818568FDC004B2A5F /* UIFont+DPT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+DPT.m"; sourceTree = "<group>"; };
 		638FE344185698FE004B2A5F /* DPTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTTheme.h; sourceTree = "<group>"; };
 		638FE345185698FE004B2A5F /* DPTTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTTheme.m; sourceTree = "<group>"; };
+		63D7C1EF188A02E0001AA88A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		638FE2FE18564E42004B2A5F /* DPTheming */ = {
 			isa = PBXGroup;
 			children = (
+				63D7C1EF188A02E0001AA88A /* README.md */,
 				6330FF6B1858EF39009C3ADB /* Sample */,
 				6330FEF21857A8B5009C3ADB /* Theming */,
 			);
@@ -272,6 +275,7 @@
 			files = (
 				6330FF801858EF39009C3ADB /* Theme1.plist in Resources */,
 				6330FF7E1858EF39009C3ADB /* Images.xcassets in Resources */,
+				63D7C1F0188A02E0001AA88A /* README.md in Resources */,
 				6330FF7D1858EF39009C3ADB /* InfoPlist.strings in Resources */,
 				6330FF811858EF6F009C3ADB /* Main.storyboard in Resources */,
 			);
