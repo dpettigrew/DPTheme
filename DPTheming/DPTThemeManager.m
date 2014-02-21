@@ -35,7 +35,6 @@
     if ([systemVersion compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) // before iOS 7
     {
         [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
-        [[UINavigationBar appearance] setTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
           [UIColor dptTintColor], UITextAttributeTextColor,
