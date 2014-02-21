@@ -38,9 +38,8 @@
         [[UINavigationBar appearance] setTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
-          [UIColor dptTintColor], NSForegroundColorAttributeName,
-          [UIColor dptBarTintColor], NSBackgroundColorAttributeName,
-          [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName], NSFontAttributeName,
+          [UIColor dptTintColor], UITextAttributeTextColor,
+          [UIFont dptThemeFontForStyle:kDPTLargeBoldFontStyleName], UITextAttributeFont,
           [UIColor dptTintColor], UITextAttributeTextShadowColor,
           [NSValue valueWithUIOffset:UIOffsetMake(0, -1)], UITextAttributeTextShadowOffset,
           nil]];
