@@ -22,6 +22,28 @@
 	<string>Avenir-Medium</string>
 	<key>LightFontName</key>
 	<string>Avenir-Light</string>
+	<key>ColorSchemeTintColor</key>
+	<dict>
+		<key>red</key>
+		<integer>78</integer>
+		<key>green</key>
+		<integer>128</integer>
+		<key>blue</key>
+		<integer>179</integer>
+		<key>alpha</key>
+		<integer>1</integer>
+	</dict>
+	<key>ColorSchemeBarTintColor</key>
+	<dict>
+		<key>red</key>
+		<integer>250</integer>
+		<key>green</key>
+		<integer>250</integer>
+		<key>blue</key>
+		<integer>250</integer>
+		<key>alpha</key>
+		<integer>1</integer>
+	</dict>
 	<key>ColorSchemeStrongTextColor</key>
 	<dict>
 		<key>red</key>
