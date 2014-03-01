@@ -59,10 +59,10 @@
     }
 }
 
-+ (instancetype)initializeThemeManagerWithThemeNamed:(NSString *)themeName {
++ (instancetype)initializeThemeManagerWithThemeNamed:(NSString *)themeName appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock{
     DPTThemeManager *sharedDPTThemeManager = [DPTThemeManager sharedDPTThemeManager];
     DPTTheme *theme = [sharedDPTThemeManager getThemeNamed:themeName];
-    [sharedDPTThemeManager setCurrentTheme:theme];
+    [sharedDPTThemeManager setCurrentTheme:theme appearanceProxySetup:appearanceProxySetupBlock];
     return sharedDPTThemeManager;
 }
 
@@ -99,9 +99,14 @@
     return _themes[themeName];
 }
 
-- (void)setCurrentTheme:(DPTTheme *)theme {
+- (void)setCurrentTheme:(DPTTheme *)theme appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock {
     _currentTheme = theme;
-    [DPTThemeManager setupAppearanceProxies];
+    if (appearanceProxySetupBlock) {
+        appearanceProxySetupBlock();
+    }
+    else {
+        [DPTThemeManager setupAppearanceProxies];
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:kDPTThemeManagerSchemeChangedNotification object:nil];
 }
 
