@@ -35,6 +35,7 @@
     if ([systemVersion compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) // before iOS 7
     {
         [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 70000
         [[UINavigationBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
           [UIColor dptTintColor], UITextAttributeTextColor,
@@ -42,6 +43,7 @@
           [UIColor dptTintColor], UITextAttributeTextShadowColor,
           [NSValue valueWithUIOffset:UIOffsetMake(0, -1)], UITextAttributeTextShadowOffset,
           nil]];
+#endif
     }
     else { // iOS 7 and later
         [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
@@ -57,10 +59,10 @@
     }
 }
 
-+ (instancetype)initializeThemeManagerWithThemeNamed:(NSString *)themeName {
++ (instancetype)initializeThemeManagerWithThemeNamed:(NSString *)themeName appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock{
     DPTThemeManager *sharedDPTThemeManager = [DPTThemeManager sharedDPTThemeManager];
     DPTTheme *theme = [sharedDPTThemeManager getThemeNamed:themeName];
-    [sharedDPTThemeManager setCurrentTheme:theme];
+    [sharedDPTThemeManager setCurrentTheme:theme appearanceProxySetup:appearanceProxySetupBlock];
     return sharedDPTThemeManager;
 }
 
@@ -97,9 +99,14 @@
     return _themes[themeName];
 }
 
-- (void)setCurrentTheme:(DPTTheme *)theme {
+- (void)setCurrentTheme:(DPTTheme *)theme appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock {
     _currentTheme = theme;
-    [DPTThemeManager setupAppearanceProxies];
+    if (appearanceProxySetupBlock) {
+        appearanceProxySetupBlock();
+    }
+    else {
+        [DPTThemeManager setupAppearanceProxies];
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:kDPTThemeManagerSchemeChangedNotification object:nil];
 }
 
