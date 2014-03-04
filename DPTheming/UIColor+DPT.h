@@ -17,5 +17,6 @@
 + (UIColor *)dptWeakTextColor;
 + (UIColor *)dptBarTintColor;
 + (UIColor *)dptTintColor;
++ (UIColor *)dptColorWithName:(NSString *)colorName;
 
 @end

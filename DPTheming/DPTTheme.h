@@ -67,4 +67,6 @@ static NSString * const kBoldFontName = @"BoldFontName";
 @property (readonly) UIColor *barTintColor;
 @property (readonly) UIColor *tintColor;
 
+- (UIColor *)colorWithName:(NSString *)colorName;
+
 @end

@@ -40,4 +40,7 @@
     return [[DPTThemeManager sharedDPTThemeManager].currentTheme tintColor];
 }
 
++ (UIColor *)dptColorWithName:(NSString *)colorName {
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme colorWithName:colorName];
+}
 @end

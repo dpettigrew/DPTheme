@@ -40,43 +40,38 @@
 
 #pragma mark Standard colors
 - (UIColor *)backgroundColor {
-    NSDictionary *colorDict = _dictionary[kColorSchemeBackgroundColor];
-    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
-    return [self colorWithRGBAColor:rgba];
+    return [self colorWithName:kColorSchemeBackgroundColor];
 }
 
 - (UIColor *)foregroundColor {
-    NSDictionary *colorDict = _dictionary[kColorSchemeForegroundColor];
-    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
-    return [self colorWithRGBAColor:rgba];
+    return [self colorWithName:kColorSchemeForegroundColor];
 }
 
 - (UIColor *)strongTextColor {
-    NSDictionary *colorDict = _dictionary[kColorSchemeStrongTextColor];
-    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
-    return [self colorWithRGBAColor:rgba];
+    return [self colorWithName:kColorSchemeStrongTextColor];
 }
 
 - (UIColor *)mediumTextColor {
-    NSDictionary *colorDict = _dictionary[kColorSchemeMediumTextColor];
-    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
-    return [self colorWithRGBAColor:rgba];
+    return [self colorWithName:kColorSchemeMediumTextColor];
 }
 
 - (UIColor *)weakTextColor {
-    NSDictionary *colorDict = _dictionary[kColorSchemeWeakTextColor];
-    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
-    return [self colorWithRGBAColor:rgba];
+    return [self colorWithName:kColorSchemeWeakTextColor];
 }
 
 - (UIColor *)barTintColor {
-    NSDictionary *colorDict = _dictionary[kColorSchemeBarTintColor];
-    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
-    return [self colorWithRGBAColor:rgba];
+    return [self colorWithName:kColorSchemeBarTintColor];
 }
 
 - (UIColor *)tintColor {
-    NSDictionary *colorDict = _dictionary[kColorSchemeTintColor];
+    return [self colorWithName:kColorSchemeTintColor];
+}
+
+- (UIColor *)colorWithName:(NSString *)colorName {
+    NSDictionary *colorDict = _dictionary[colorName];
+    if (colorDict == nil) {
+        return nil;
+    }
     RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
     return [self colorWithRGBAColor:rgba];
 }
