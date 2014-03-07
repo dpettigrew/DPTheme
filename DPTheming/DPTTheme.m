@@ -133,4 +133,21 @@
     return fontName;
 }
 
+- (UIStatusBarStyle)statusBarStyle {
+    NSString *statusBarStyle = _dictionary[kStatusBarStyle];
+    if ([statusBarStyle isEqualToString:@"UIStatusBarStyleDefault"]) {
+        return UIStatusBarStyleDefault;
+    }
+    else if ([statusBarStyle isEqualToString:@"UIStatusBarStyleLightContent"]) {
+        return UIStatusBarStyleLightContent;
+    }
+    else if ([statusBarStyle isEqualToString:@"UIStatusBarStyleBlackTranslucent"]) {
+        return UIStatusBarStyleBlackTranslucent;
+    }
+    else if ([statusBarStyle isEqualToString:@"UIStatusBarStyleBlackOpaque"]) {
+        return UIStatusBarStyleBlackOpaque;
+    }
+    return UIStatusBarStyleDefault;
+}
+
 @end

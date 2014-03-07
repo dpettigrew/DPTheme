@@ -40,6 +40,9 @@ static NSString * const kLightFontName = @"LightFontName";
 static NSString * const kRegularFontName = @"RegularFontName";
 static NSString * const kBoldFontName = @"BoldFontName";
 
+// Other
+static NSString * const kStatusBarStyle = @"StatusBarStyle";
+
 @interface DPTTheme : NSObject
 
 - (instancetype)initWithPlistFile:(NSString *)filePath andThemeName:(NSString *)themeName;
@@ -66,6 +69,7 @@ static NSString * const kBoldFontName = @"BoldFontName";
 @property (readonly) UIColor *weakTextColor;
 @property (readonly) UIColor *barTintColor;
 @property (readonly) UIColor *tintColor;
+@property (readonly) UIStatusBarStyle statusBarStyle;
 
 - (UIColor *)colorWithName:(NSString *)colorName;
 
