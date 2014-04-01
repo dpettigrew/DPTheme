@@ -34,7 +34,6 @@
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
     if ([systemVersion compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) // before iOS 7
     {
-        [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < 70000
         [[UINavigationBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
@@ -46,10 +45,8 @@
 #endif
     }
     else { // iOS 7 and later
-        [[UIToolbar appearance] setTintColor:[UIColor dptTintColor]];
         [[UIToolbar appearance] setBarTintColor:[UIColor dptBarTintColor]];
         [[UINavigationBar appearance] setBarTintColor:[UIColor dptBarTintColor]];
-        [[UINavigationBar appearance] setTintColor:[UIColor dptTintColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
           [UIColor dptTintColor], NSForegroundColorAttributeName,
