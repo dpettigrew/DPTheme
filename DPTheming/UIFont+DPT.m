@@ -80,4 +80,10 @@
     return preferredFont;
 }
 
++ (UIFont *)dptThemeFontForFontNameRef:(NSString *)fontNameRef size:(CGFloat)fontSize theme:(DPTTheme *)theme {
+    NSString *fontName = [theme fontNameForFontNameRef:fontNameRef];
+    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+    return font;
+}
+
 @end

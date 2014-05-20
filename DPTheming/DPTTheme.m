@@ -7,6 +7,7 @@
 //
 
 #import "DPTTheme.h"
+#import "DPTTextStyle.h"
 
 @interface DPTTheme ()
 
@@ -38,103 +39,146 @@
     return rgba;
 }
 
+- (RGBAColor)RGBAColorFromHexString:(NSString *)hexColorString {
+    RGBAColor rgba;
+    NSString *redStr = [hexColorString substringWithRange:NSRangeFromString(@"{0, 2}")];
+    NSString *greenStr = [hexColorString substringWithRange:NSRangeFromString(@"{2, 2}")];
+    NSString *blueStr = [hexColorString substringWithRange:NSRangeFromString(@"{4, 2}")];
+
+    unsigned redVal, greenVal, blueVal;
+    NSScanner *scanner = [NSScanner scannerWithString:redStr];
+    [scanner scanHexInt:&redVal];
+    scanner = [NSScanner scannerWithString:greenStr];
+    [scanner scanHexInt:&greenVal];
+    scanner = [NSScanner scannerWithString:blueStr];
+    [scanner scanHexInt:&blueVal];
+    
+    rgba.red = redVal;
+    rgba.green = greenVal;
+    rgba.blue = blueVal;
+    rgba.alpha = 1.0;
+    return rgba;
+}
+
 #pragma mark Standard colors
 - (UIColor *)backgroundColor {
-    return [self colorWithName:kColorSchemeBackgroundColor];
+    return [self colorForNameRef:kDPTBackgroundColor];
 }
 
 - (UIColor *)foregroundColor {
-    return [self colorWithName:kColorSchemeForegroundColor];
+    return [self colorForNameRef:kDPTForegroundColor];
 }
 
 - (UIColor *)strongTextColor {
-    return [self colorWithName:kColorSchemeStrongTextColor];
+    return [self colorForNameRef:kDPTStrongTextColor];
 }
 
 - (UIColor *)mediumTextColor {
-    return [self colorWithName:kColorSchemeMediumTextColor];
+    return [self colorForNameRef:kDPTMediumTextColor];
 }
 
 - (UIColor *)weakTextColor {
-    return [self colorWithName:kColorSchemeWeakTextColor];
+    return [self colorForNameRef:kDPTWeakTextColor];
 }
 
 - (UIColor *)barTintColor {
-    return [self colorWithName:kColorSchemeBarTintColor];
+    return [self colorForNameRef:kDPTBarTintColor];
 }
 
 - (UIColor *)tintColor {
-    return [self colorWithName:kColorSchemeTintColor];
+    return [self colorForNameRef:kDPTTintColor];
 }
 
-- (UIColor *)colorWithName:(NSString *)colorName {
-    NSDictionary *colorDict = _dictionary[colorName];
-    if (colorDict == nil) {
+- (UIColor *)colorForNameRef:(NSString *)colorNameRef {
+    id color = _dictionary[colorNameRef];
+    if (color == nil) {
         return nil;
     }
-    RGBAColor rgba = [self RGBAColorFromDictionary:colorDict];
-    return [self colorWithRGBAColor:rgba];
+    if ([color isKindOfClass:[NSDictionary class]]) {
+        RGBAColor rgba = [self RGBAColorFromDictionary:color];
+        return [self colorWithRGBAColor:rgba];
+    }
+    else if ([color isKindOfClass:[NSString class]]) {
+        if (((NSString *)color).length < 6) {
+            NSLog(@"Failed to parse color string - %@", color);
+            return nil;
+        }
+        NSString *colorStr = color;
+        if (colorStr.length == 7) {
+            // #fefefe format
+            colorStr = [color substringFromIndex:1];
+        }
+        
+        RGBAColor rgba = [self RGBAColorFromHexString:colorStr];
+        return [self colorWithRGBAColor:rgba];
+    }
+    else {
+        return nil;
+    }
 }
 
 #pragma mark Font sizes
 - (CGFloat) extraSmallFontSize {
-    NSNumber *fontSize = _dictionary[kExtraSmallFontSize];
-    return fontSize.floatValue;
+    return [self fontSizeForFontSizeRef:kDPTExtraSmallFontSize];
 }
 
 - (CGFloat) smallFontSize {
-    NSNumber *fontSize = _dictionary[kSmallFontSize];
-    return fontSize.floatValue;
+    return [self fontSizeForFontSizeRef:kDPTSmallFontSize];
 }
 
 - (CGFloat) mediumFontSize {
-    NSNumber *fontSize = _dictionary[kMediumFontSize];
-    return fontSize.floatValue;
+    return [self fontSizeForFontSizeRef:kDPTMediumFontSize];
 }
 
 - (CGFloat) largeFontSize {
-    NSNumber *fontSize = _dictionary[kLargeFontSize];
-    return fontSize.floatValue;
+    return [self fontSizeForFontSizeRef:kDPTLargeFontSize];
 }
 
 - (CGFloat) extraLargeFontSize {
-    NSNumber *fontSize = _dictionary[kExtraLargeFontSize];
-    return fontSize.floatValue;
+    return [self fontSizeForFontSizeRef:kDPTExtraLargeFontSize];
 }
 
 - (CGFloat) extraExtraLargeFontSize {
-    NSNumber *fontSize = _dictionary[kExtraExtraLargeFontSize];
-    return fontSize.floatValue;
+    return [self fontSizeForFontSizeRef:kDPTExtraExtraLargeFontSize];
 }
 
 - (CGFloat) extraExtraExtraLargeFontSize {
-    NSNumber *fontSize = _dictionary[kExtraExtraExtraLargeFontSize];
-    return fontSize.floatValue;
+    return [self fontSizeForFontSizeRef:kDPTExtraExtraExtraLargeFontSize];
 }
 
 - (CGFloat) titleFontSize {
-    NSNumber *fontSize = _dictionary[kTitleFontSize];
+    return [self fontSizeForFontSizeRef:kDPTTitleFontSize];
+}
+
+- (CGFloat)fontSizeForFontSizeRef:(NSString *)fontSizeRef {
+    NSNumber *fontSize = _dictionary[fontSizeRef];
     return fontSize.floatValue;
 }
 
 #pragma mark Font names
 - (NSString *)lightFontName {
-    NSString *fontName = _dictionary[kLightFontName];
+    NSString *fontName = _dictionary[kDPTLightFontName];
     return fontName;
 }
 
 - (NSString *)regularFontName {
-    NSString *fontName = _dictionary[kRegularFontName];
+    NSString *fontName = _dictionary[kDPTRegularFontName];
     return fontName;
 }
 
 - (NSString *)boldFontName {
-    NSString *fontName = _dictionary[kBoldFontName];
+    NSString *fontName = _dictionary[kDPTBoldFontName];
     return fontName;
 }
 
+- (NSString *)fontNameForFontNameRef:(NSString *)fontNameRef {
+    NSString *fontName = _dictionary[fontNameRef];
+    return fontName;
+}
+
+#pragma mark
 - (UIStatusBarStyle)statusBarStyle {
-    NSString *statusBarStyle = _dictionary[kStatusBarStyle];
+    NSString *statusBarStyle = _dictionary[kDPTStatusBarStyle];
     if ([statusBarStyle isEqualToString:@"UIStatusBarStyleDefault"]) {
         return UIStatusBarStyleDefault;
     }
@@ -148,6 +192,15 @@
         return UIStatusBarStyleBlackOpaque;
     }
     return UIStatusBarStyleDefault;
+}
+
+#pragma mark Text Styles
+- (DPTTextStyle *)textStyleForStyleRef:(NSString *)textStyleRef {
+    NSDictionary *textStyleDict = _dictionary[textStyleRef];
+    if (!textStyleDict) {
+        return nil;
+    }
+    return [[DPTTextStyle alloc] initWithDictionary:textStyleDict theme:self];
 }
 
 @end

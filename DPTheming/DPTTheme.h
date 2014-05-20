@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class DPTTextStyle;
+
 typedef struct {
     CGFloat red;
     CGFloat green;
@@ -17,31 +19,31 @@ typedef struct {
 
 // Define the strings used in the theme plist file.
 // Colors
-static NSString * const kColorSchemeBackgroundColor = @"ColorSchemeBackgroundColor";
-static NSString * const kColorSchemeForegroundColor = @"ColorSchemeForegroundColor";
-static NSString * const kColorSchemeStrongTextColor = @"ColorSchemeStrongTextColor";
-static NSString * const kColorSchemeMediumTextColor = @"ColorSchemeMediumTextColor";
-static NSString * const kColorSchemeWeakTextColor = @"ColorSchemeWeakTextColor";
-static NSString * const kColorSchemeBarTintColor = @"ColorSchemeBarTintColor";
-static NSString * const kColorSchemeTintColor = @"ColorSchemeTintColor";
+static NSString * const kDPTBackgroundColor = @"BackgroundColor";
+static NSString * const kDPTForegroundColor = @"ForegroundColor";
+static NSString * const kDPTStrongTextColor = @"StrongTextColor";
+static NSString * const kDPTMediumTextColor = @"MediumTextColor";
+static NSString * const kDPTWeakTextColor = @"WeakTextColor";
+static NSString * const kDPTBarTintColor = @"BarTintColor";
+static NSString * const kDPTTintColor = @"TintColor";
 
 // Font sizes
-static NSString * const kExtraSmallFontSize = @"ExtraSmallFontSize";
-static NSString * const kSmallFontSize = @"SmallFontSize";
-static NSString * const kMediumFontSize = @"MediumFontSize";
-static NSString * const kLargeFontSize = @"LargeFontSize";
-static NSString * const kExtraLargeFontSize = @"ExtraLargeFontSize";
-static NSString * const kExtraExtraLargeFontSize = @"ExtraExtraLargeFontSize";
-static NSString * const kExtraExtraExtraLargeFontSize = @"ExtraExtraExtraLargeFontSize";
-static NSString * const kTitleFontSize = @"TitleFontSize";
+static NSString * const kDPTExtraSmallFontSize = @"ExtraSmallFontSize";
+static NSString * const kDPTSmallFontSize = @"SmallFontSize";
+static NSString * const kDPTMediumFontSize = @"MediumFontSize";
+static NSString * const kDPTLargeFontSize = @"LargeFontSize";
+static NSString * const kDPTExtraLargeFontSize = @"ExtraLargeFontSize";
+static NSString * const kDPTExtraExtraLargeFontSize = @"ExtraExtraLargeFontSize";
+static NSString * const kDPTExtraExtraExtraLargeFontSize = @"ExtraExtraExtraLargeFontSize";
+static NSString * const kDPTTitleFontSize = @"TitleFontSize";
 
 // Font names
-static NSString * const kLightFontName = @"LightFontName";
-static NSString * const kRegularFontName = @"RegularFontName";
-static NSString * const kBoldFontName = @"BoldFontName";
+static NSString * const kDPTLightFontName = @"LightFontName";
+static NSString * const kDPTRegularFontName = @"RegularFontName";
+static NSString * const kDPTBoldFontName = @"BoldFontName";
 
 // Other
-static NSString * const kStatusBarStyle = @"StatusBarStyle";
+static NSString * const kDPTStatusBarStyle = @"StatusBarStyle";
 
 @interface DPTTheme : NSObject
 
@@ -49,6 +51,7 @@ static NSString * const kStatusBarStyle = @"StatusBarStyle";
 
 @property (nonatomic, copy) NSString *themeName;
 
+// Standard font size properties
 @property (readonly) CGFloat extraSmallFontSize;
 @property (readonly) CGFloat smallFontSize;
 @property (readonly) CGFloat mediumFontSize;
@@ -58,10 +61,12 @@ static NSString * const kStatusBarStyle = @"StatusBarStyle";
 @property (readonly) CGFloat extraExtraExtraLargeFontSize;
 @property (readonly) CGFloat titleFontSize;
 
+// Standard font name properties
 @property (nonatomic, copy) NSString *lightFontName;
 @property (nonatomic, copy) NSString *regularFontName;
 @property (nonatomic, copy) NSString *boldFontName;
 
+// Standard color properties
 @property (readonly) UIColor *backgroundColor;
 @property (readonly) UIColor *foregroundColor;
 @property (readonly) UIColor *strongTextColor;
@@ -71,6 +76,12 @@ static NSString * const kStatusBarStyle = @"StatusBarStyle";
 @property (readonly) UIColor *tintColor;
 @property (readonly) UIStatusBarStyle statusBarStyle;
 
-- (UIColor *)colorWithName:(NSString *)colorName;
+// Generic accessors for color, font and font size.
+- (UIColor *)colorForNameRef:(NSString *)colorNameRef;
+- (NSString *)fontNameForFontNameRef:(NSString *)fontNameRef;
+- (CGFloat)fontSizeForFontSizeRef:(NSString *)fontSizeRef;
+
+// Text Styles
+- (DPTTextStyle *)textStyleForStyleRef:(NSString *)textStyleNameRef;
 
 @end

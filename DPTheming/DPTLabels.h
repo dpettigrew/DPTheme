@@ -1,5 +1,5 @@
 //
-//  UIAppearanceContainerViews.h
+//  DPTLabels.h
 //  DPTheming
 //
 //  Created by David Pettigrew on 6/10/13.
@@ -11,6 +11,8 @@
 // Use these classes to contain the scope of UIAppearance proxy objects when using the UIAppearance protocol appearanceWhenContainedIn: message
 // i.e.     [[UILabel appearanceWhenContainedIn:[BackgroundView class], nil] setFont:[UIFont fontWithName:@"AvenirNext-Regular" size:20]];
 // has the effect of limiting the appearance change to only BackgroundView classes not all UIViews. You would set this as the view's "Custom Class" in Interface Builder.
+
+@class DPTTextStyle;
 
 @interface DPTExtraSmallLightLabel : UILabel
 
@@ -85,5 +87,31 @@
 @end
 
 @interface DPTTitleLabel : UILabel
+
+@end
+
+@interface DPTLabel : UILabel
+
+@property (nonatomic, strong) DPTTextStyle *dptTextStyle;
+
+@end
+
+@interface DPTH1Label : DPTLabel
+
+@end
+
+@interface DPTH2Label : DPTLabel
+
+@end
+
+@interface DPTH3Label : DPTLabel
+
+@end
+
+@interface DPTH4Label : DPTLabel
+
+@end
+
+@interface DPTParagraphLabel : DPTLabel
 
 @end

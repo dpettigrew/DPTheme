@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class DPTTheme;
+
 typedef enum {
     kDPTExtraSmallLightFontStyleName,
     kDPTExtraSmallFontStyleName,
@@ -34,6 +36,7 @@ typedef enum {
 
 @interface UIFont (Theme)
 
-+ (UIFont *)dptThemeFontForStyle:(DPTFontStyles)styleName;
++ (UIFont *)dptThemeFontForStyle:(DPTFontStyles)fontStyle;
++ (UIFont *)dptThemeFontForFontNameRef:(NSString *)fontNameRef size:(CGFloat)fontSize theme:(DPTTheme *)theme;
 
 @end

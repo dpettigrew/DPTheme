@@ -1,5 +1,5 @@
 //
-//  UIAppearanceContainerViews.m
+//  DPTLabels.m
 //  DPTheming
 //
 //  Created by David Pettigrew on 6/10/13.
@@ -8,6 +8,8 @@
 
 #import "DPTLabels.h"
 #import "UIFont+DPT.h"
+#import "UIColor+DPT.h"
+#import "DPTTextStyle.h"
 
 @implementation DPTExtraSmallLightLabel
 
@@ -459,6 +461,126 @@
         self.font = [UIFont dptThemeFontForStyle:kDPTTitleFontStyleName];
         self.textColor = [UIColor dptStrongTextColor];
         self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+    return self;
+}
+
+@end
+
+@implementation DPTLabel
+
+- (void)setDptTextStyle:(DPTTextStyle *)dptTextStyle {
+    self.font = dptTextStyle.font;
+    if (dptTextStyle.color) {
+        self.textColor = dptTextStyle.color;
+    }
+    else {
+        self.textColor = [UIColor dptStrongTextColor];
+    }
+    if (dptTextStyle.backgroundColor) {
+        self.backgroundColor = dptTextStyle.backgroundColor;
+    }
+    else {
+        self.backgroundColor = [UIColor dptBackgroundColor];
+    }
+}
+
+@end
+
+@implementation DPTH1Label
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH1StyleRef];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH1StyleRef];
+    }
+    return self;
+}
+
+@end
+
+@implementation DPTH2Label
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH2StyleRef];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH2StyleRef];
+    }
+    return self;
+}
+
+@end
+
+@implementation DPTH3Label
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH3StyleRef];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH3StyleRef];
+    }
+    return self;
+}
+
+@end
+
+@implementation DPTH4Label
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH4StyleRef];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH4StyleRef];
+    }
+    return self;
+}
+
+@end
+
+@implementation DPTParagraphLabel
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kParagraphStyleRef];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kParagraphStyleRef];
     }
     return self;
 }

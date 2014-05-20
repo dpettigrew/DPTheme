@@ -41,6 +41,7 @@
 }
 
 + (UIColor *)dptColorWithName:(NSString *)colorName {
-    return [[DPTThemeManager sharedDPTThemeManager].currentTheme colorWithName:colorName];
+    return [[DPTThemeManager sharedDPTThemeManager].currentTheme colorForNameRef:colorName];
 }
+
 @end
