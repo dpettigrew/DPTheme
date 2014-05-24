@@ -12,7 +12,7 @@
 // i.e.     [[UILabel appearanceWhenContainedIn:[BackgroundView class], nil] setFont:[UIFont fontWithName:@"AvenirNext-Regular" size:20]];
 // has the effect of limiting the appearance change to only BackgroundView classes not all UIViews. You would set this as the view's "Custom Class" in Interface Builder.
 
-@class DPTTextStyle;
+@class DPTStyle;
 
 @interface DPTExtraSmallLightLabel : UILabel
 
@@ -92,7 +92,7 @@
 
 @interface DPTLabel : UILabel
 
-@property (nonatomic, strong) DPTTextStyle *dptTextStyle;
+@property (nonatomic, strong) DPTStyle *dptTextStyle;
 
 @end
 

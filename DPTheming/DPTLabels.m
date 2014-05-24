@@ -9,7 +9,7 @@
 #import "DPTLabels.h"
 #import "UIFont+DPT.h"
 #import "UIColor+DPT.h"
-#import "DPTTextStyle.h"
+#import "DPTStyle.h"
 
 @implementation DPTExtraSmallLightLabel
 
@@ -469,7 +469,7 @@
 
 @implementation DPTLabel
 
-- (void)setDptTextStyle:(DPTTextStyle *)dptTextStyle {
+- (void)setDptTextStyle:(DPTStyle *)dptTextStyle {
     self.font = dptTextStyle.font;
     if (dptTextStyle.color) {
         self.textColor = dptTextStyle.color;
@@ -492,7 +492,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH1StyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kH1StyleRef];
     }
     return self;
 }
@@ -500,7 +500,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH1StyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kH1StyleRef];
     }
     return self;
 }
@@ -512,7 +512,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH2StyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kH2StyleRef];
     }
     return self;
 }
@@ -520,7 +520,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH2StyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kH2StyleRef];
     }
     return self;
 }
@@ -532,7 +532,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH3StyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kH3StyleRef];
     }
     return self;
 }
@@ -540,7 +540,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH3StyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kH3StyleRef];
     }
     return self;
 }
@@ -552,7 +552,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH4StyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kH4StyleRef];
     }
     return self;
 }
@@ -560,7 +560,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kH4StyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kH4StyleRef];
     }
     return self;
 }
@@ -572,7 +572,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kParagraphStyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kParagraphStyleRef];
     }
     return self;
 }
@@ -580,7 +580,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        self.dptTextStyle = [DPTTextStyle textStyleForStyleRef:kParagraphStyleRef];
+        self.dptTextStyle = [DPTStyle styleForStyleRef:kParagraphStyleRef];
     }
     return self;
 }

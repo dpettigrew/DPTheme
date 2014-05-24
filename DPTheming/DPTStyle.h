@@ -15,7 +15,7 @@ static NSString * const kH3StyleRef = @"h3";
 static NSString * const kH4StyleRef = @"h4";
 static NSString * const kParagraphStyleRef = @"p";
 
-@interface DPTTextStyle : NSObject
+@interface DPTStyle : NSObject
 
 @property (nonatomic, strong) UIFont *font;
 @property (nonatomic, strong) UIColor *color;
@@ -24,6 +24,6 @@ static NSString * const kParagraphStyleRef = @"p";
 - (instancetype)initWithDictionary:(NSDictionary *)textStyleDictionary theme:(DPTTheme *)theme;
 - (instancetype)initWithDictionary:(NSDictionary *)textStyleDictionary;
 
-+ (DPTTextStyle *)textStyleForStyleRef:(NSString *)styleRef;
++ (DPTStyle *)styleForStyleRef:(NSString *)styleRef;
 
 @end

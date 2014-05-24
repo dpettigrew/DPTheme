@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class DPTTextStyle;
+@class DPTStyle;
 
 typedef struct {
     CGFloat red;
@@ -82,6 +82,6 @@ static NSString * const kDPTStatusBarStyle = @"StatusBarStyle";
 - (CGFloat)fontSizeForFontSizeRef:(NSString *)fontSizeRef;
 
 // Text Styles
-- (DPTTextStyle *)textStyleForStyleRef:(NSString *)textStyleNameRef;
+- (DPTStyle *)textStyleForStyleRef:(NSString *)textStyleNameRef;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "DPTTheme.h"
-#import "DPTTextStyle.h"
+#import "DPTStyle.h"
 
 @interface DPTTheme ()
 
@@ -195,12 +195,12 @@
 }
 
 #pragma mark Text Styles
-- (DPTTextStyle *)textStyleForStyleRef:(NSString *)textStyleRef {
+- (DPTStyle *)textStyleForStyleRef:(NSString *)textStyleRef {
     NSDictionary *textStyleDict = _dictionary[textStyleRef];
     if (!textStyleDict) {
         return nil;
     }
-    return [[DPTTextStyle alloc] initWithDictionary:textStyleDict theme:self];
+    return [[DPTStyle alloc] initWithDictionary:textStyleDict theme:self];
 }
 
 @end
