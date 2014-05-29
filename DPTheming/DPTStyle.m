@@ -37,7 +37,7 @@
 
 + (DPTStyle *)styleForStyleRef:(NSString *)styleRef {
     DPTTheme *theme = [DPTThemeManager sharedDPTThemeManager].currentTheme;
-    return [theme textStyleForStyleRef:styleRef];
+    return [theme styleForStyleRef:styleRef];
 }
 
 @end

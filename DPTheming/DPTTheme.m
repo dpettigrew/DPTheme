@@ -90,6 +90,9 @@
 }
 
 - (UIColor *)colorForNameRef:(NSString *)colorNameRef {
+    if (!colorNameRef) {
+        return nil;
+    }
     id color = _dictionary[colorNameRef];
     if (color == nil) {
         return nil;
@@ -195,7 +198,7 @@
 }
 
 #pragma mark Text Styles
-- (DPTStyle *)textStyleForStyleRef:(NSString *)textStyleRef {
+- (DPTStyle *)styleForStyleRef:(NSString *)textStyleRef {
     NSDictionary *textStyleDict = _dictionary[textStyleRef];
     if (!textStyleDict) {
         return nil;

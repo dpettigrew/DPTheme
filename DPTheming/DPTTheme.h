@@ -81,7 +81,7 @@ static NSString * const kDPTStatusBarStyle = @"StatusBarStyle";
 - (NSString *)fontNameForFontNameRef:(NSString *)fontNameRef;
 - (CGFloat)fontSizeForFontSizeRef:(NSString *)fontSizeRef;
 
-// Text Styles
-- (DPTStyle *)textStyleForStyleRef:(NSString *)textStyleNameRef;
+// Styles
+- (DPTStyle *)styleForStyleRef:(NSString *)textStyleNameRef;
 
 @end
