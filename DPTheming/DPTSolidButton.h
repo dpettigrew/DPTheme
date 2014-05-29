@@ -16,31 +16,17 @@
 @property (nonatomic, strong) UIFont *font;
 
 @property (nonatomic, strong) UIColor *normalBackgroundColor;
+@property (nonatomic, strong) UIColor *normalBorderColor;
 @property (nonatomic, strong) UIColor *normalTextColor;
+@property (nonatomic, strong) NSNumber *normalBackgroundOpacity;
 
 @property (nonatomic, strong) UIColor *highlightedBackgroundColor;
+@property (nonatomic, strong) UIColor *highlightedBorderColor;
 @property (nonatomic, strong) UIColor *highlightedTextColor;
+@property (nonatomic, strong) NSNumber *highlightedBackgroundOpacity;
 
 - (void)configure; // call after setting the above properties
 
 - (void)configureWithNormalStyle:(DPTStyle *)normalStyle highlightedStyle:(DPTStyle *)highlightedStyle text:(NSString *)text;
-
-@end
-
-@interface DPTSolidButtonNormalView : UIView
-
-- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor label:(UILabel *)label;
-
-@property (nonatomic, strong) UIColor *backgroundColor;
-@property (nonatomic, strong) UILabel *label;
-
-@end
-
-@interface DPTSolidButtonHighlightedView : UIView
-
-- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor label:(UILabel *)label;
-
-@property (nonatomic, strong) UIColor *backgroundColor;
-@property (nonatomic, strong) UILabel *label;
 
 @end
