@@ -19,10 +19,13 @@
         NSString *fontSizeRef = textStyleDictionary[@"SizeRef"];
         NSString *colorRef = textStyleDictionary[@"TextColorRef"];
         NSString *backgroundColorRef = textStyleDictionary[@"BackgroundColorRef"];
+        NSString *borderColorRef = textStyleDictionary[@"BorderColorRef"];
         CGFloat fontSize = [theme fontSizeForFontSizeRef:fontSizeRef];
         self.font = [UIFont dptThemeFontForFontNameRef:fontNameRef size:fontSize theme:theme];
         self.color = [theme colorForNameRef:colorRef];
         self.backgroundColor = [theme colorForNameRef:backgroundColorRef];
+        self.borderColor = [theme colorForNameRef:borderColorRef];
+        self.backgroundOpacity = textStyleDictionary[@"BackgroundOpacity"];
     }
     return self;
 }

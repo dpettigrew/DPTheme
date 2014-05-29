@@ -10,43 +10,29 @@
 #import "DPTStyle.h"
 #import "UIView+Utils.h"
 
-@implementation DPTSolidButtonNormalView
-
-- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor label:(UILabel *)label {
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.opaque = NO;
-        _backgroundColor = backgroundColor;
-        _label = label;
-    }
-    return self;
+void strokeAndFillRect(CGContextRef c, CGRect rect) {
+    CGContextFillRect(c, rect);
+    CGContextStrokeRect(c, rect);
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGFloat lineWidth = 1.0;
-    
-    CGContextSetLineWidth(context, lineWidth);
-    CGContextSetStrokeColorWithColor(context, _backgroundColor.CGColor);
-    CGContextSetFillColorWithColor(context, _backgroundColor.CGColor);
-    CGContextFillRect(context, rect);
-    
-    [self addSubview:self.label];
-}
+@interface DPTBorderedRectView : UIView
+
+- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor borderColor:(UIColor *)borderColor label:(UILabel *)label;
+
+@property (nonatomic, strong) UIColor *backgroundColor;
+@property (nonatomic, strong) UIColor *borderColor;
+@property (nonatomic, strong) UILabel *label;
 
 @end
 
-@implementation DPTSolidButtonHighlightedView
+@implementation DPTBorderedRectView
 
-- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor label:(UILabel *)label {
+- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor borderColor:(UIColor *)borderColor label:(UILabel *)label {
     self = [super initWithFrame:frame];
     if (self) {
         self.opaque = NO;
         _backgroundColor = backgroundColor;
+        _borderColor = borderColor;
         _label = label;
     }
     return self;
@@ -57,14 +43,13 @@
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGFloat lineWidth = 1.0;
-    
-    CGContextSetLineWidth(context, lineWidth);
-    CGContextSetStrokeColorWithColor(context, _backgroundColor.CGColor);
-    CGContextSetFillColorWithColor(context, _backgroundColor.CGColor);
+    CGPathRef path = CGPathCreateWithRect(rect, NULL);
+    [_backgroundColor setFill];
+    [_borderColor setStroke];
     CGContextFillRect(context, rect);
-    
+    CGContextStrokeRect(context, rect);
+    CGPathRelease(path);
+    self.label.center = CGPointMake(rect.size.width/2.0, rect.size.height/2.0);
     [self addSubview:self.label];
 }
 
@@ -76,35 +61,42 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self configure];
     }
     return self;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self configure];
+}
+
+- (void)configureLabel:(UILabel *)label textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor {
+    label.text = self.text;
+    label.textColor = textColor;
+    label.font = self.font;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.backgroundColor = backgroundColor;
+    [label sizeToFit];
 }
 
 - (void)configure {
     UILabel *normalLabel = [[UILabel alloc] initWithFrame:self.bounds];
-    normalLabel.text = self.text;
-    normalLabel.font = self.font;
-    normalLabel.textAlignment = NSTextAlignmentCenter;
-    normalLabel.backgroundColor = self.normalBackgroundColor;
-    normalLabel.textColor = self.normalTextColor;
-    DPTSolidButtonNormalView *buttonNormalView = [[DPTSolidButtonNormalView alloc] initWithFrame:self.bounds backgroundColor:self.normalBackgroundColor label:normalLabel];
+    UIColor *backgroundColor = self.normalBackgroundColor;
+    if (self.normalBackgroundOpacity) {
+        backgroundColor = [self.normalBackgroundColor colorWithAlphaComponent:[self.normalBackgroundOpacity floatValue]];
+    }
+    [self configureLabel:normalLabel textColor:self.normalTextColor backgroundColor:backgroundColor];
+    DPTBorderedRectView *buttonNormalView = [[DPTBorderedRectView alloc] initWithFrame:self.bounds backgroundColor:backgroundColor borderColor:self.normalBorderColor label:normalLabel];
     
     UIImage *normalButtonImage = [buttonNormalView image];
     [self setImage:normalButtonImage forState:UIControlStateNormal];
     
     UILabel *highlightedLabel = [[UILabel alloc] initWithFrame:self.bounds];
-    highlightedLabel.text = self.text;
-    highlightedLabel.font = self.font;
-    highlightedLabel.textAlignment = NSTextAlignmentCenter;
-    highlightedLabel.backgroundColor = self.highlightedBackgroundColor;
-    highlightedLabel.textColor = self.highlightedTextColor;
-    DPTSolidButtonHighlightedView *buttonHighlightedView = [[DPTSolidButtonHighlightedView alloc] initWithFrame:self.bounds backgroundColor:self.highlightedBackgroundColor label:highlightedLabel];
+    backgroundColor = self.highlightedBackgroundColor;
+    if (self.highlightedBackgroundOpacity) {
+        backgroundColor = [self.highlightedBackgroundColor colorWithAlphaComponent:[self.highlightedBackgroundOpacity floatValue]];
+    }
+    [self configureLabel:highlightedLabel textColor:self.highlightedTextColor backgroundColor:backgroundColor];
+    DPTBorderedRectView *buttonHighlightedView = [[DPTBorderedRectView alloc] initWithFrame:self.bounds backgroundColor:self.highlightedBackgroundColor borderColor:self.highlightedBorderColor label:highlightedLabel];
     
     UIImage *buttonHighlightedViewImage = [buttonHighlightedView image];
     [self setImage:buttonHighlightedViewImage forState:UIControlStateHighlighted];
@@ -118,10 +110,12 @@
     self.font = normalStyle.font;
     
     self.normalBackgroundColor = normalStyle.backgroundColor;
+    self.normalBorderColor = normalStyle.borderColor;
     self.normalTextColor = normalStyle.color;
     
     self.highlightedBackgroundColor = highlightedStyle.backgroundColor;
     self.highlightedTextColor = highlightedStyle.color;
+    self.highlightedBorderColor = highlightedStyle.borderColor;
     [self configure];
 }
 
