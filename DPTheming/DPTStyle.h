@@ -22,6 +22,7 @@ static NSString * const kParagraphStyleRef = @"p";
 @property (nonatomic, strong) UIColor *backgroundColor;
 @property (nonatomic, strong) UIColor *borderColor;
 @property (nonatomic, strong) NSNumber *backgroundOpacity;
+@property (nonatomic, strong) NSNumber *textAlignment;
 
 - (instancetype)initWithDictionary:(NSDictionary *)textStyleDictionary theme:(DPTTheme *)theme;
 - (instancetype)initWithDictionary:(NSDictionary *)textStyleDictionary;
