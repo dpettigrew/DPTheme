@@ -23,20 +23,18 @@
     self = [super init];
     if (self) {
         NSMutableAttributedString *plText = [[NSMutableAttributedString alloc]initWithString:placeholder];
-        UIFont *myStringFont1 = style.font;
-        UIColor *plTextColor = style.color;
         NSMutableParagraphStyle *myStringParaStyle1 = [[NSMutableParagraphStyle alloc] init];
         myStringParaStyle1.alignment = style.textAlignment.integerValue;
         
-        [plText addAttribute:NSFontAttributeName value:myStringFont1 range:NSMakeRange(0, placeholder.length)];
+        [plText addAttribute:NSFontAttributeName value:style.font range:NSMakeRange(0, placeholder.length)];
         [plText addAttribute:NSParagraphStyleAttributeName value:myStringParaStyle1 range:NSMakeRange(0, placeholder.length)];
-        [plText addAttribute:NSForegroundColorAttributeName value:plTextColor range:NSMakeRange(0, placeholder.length)];
+        [plText addAttribute:NSForegroundColorAttributeName value:style.color range:NSMakeRange(0, placeholder.length)];
         self.attributedPlaceholder = plText;
-        self.font = myStringFont1;
+        self.font = style.font;
         self.layer.borderColor = [UIColor dptMediumTextColor].CGColor;
         self.layer.borderWidth = 1.0;
         self.textAlignment = style.textAlignment.integerValue;
-        self.textColor = [UIColor dptTintColor];
+        self.textColor = style.color;
         self.keyboardType = UIKeyboardTypeEmailAddress;
     }
     return self;
