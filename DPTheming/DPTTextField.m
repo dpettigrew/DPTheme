@@ -22,6 +22,7 @@
 - (instancetype)initWithStyle:(DPTStyle *)style placeholder:(NSString *)placeholder {
     self = [super init];
     if (self) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
         NSMutableAttributedString *plText = [[NSMutableAttributedString alloc]initWithString:placeholder];
         UIFont *myStringFont1 = style.font;
         UIColor *plTextColor = style.color;
