@@ -110,10 +110,12 @@ void strokeAndFillRect(CGContextRef c, CGRect rect) {
     self.font = normalStyle.font;
     
     self.normalBackgroundColor = normalStyle.backgroundColor;
+    self.normalBackgroundOpacity = normalStyle.backgroundOpacity;
     self.normalBorderColor = normalStyle.borderColor;
     self.normalTextColor = normalStyle.color;
     
     self.highlightedBackgroundColor = highlightedStyle.backgroundColor;
+    self.highlightedBackgroundOpacity = highlightedStyle.backgroundOpacity;
     self.highlightedTextColor = highlightedStyle.color;
     self.highlightedBorderColor = highlightedStyle.borderColor;
     [self configure];
