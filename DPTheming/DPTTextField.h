@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DPTStyle.h"
 
 @interface DPTTextField : UITextField
 

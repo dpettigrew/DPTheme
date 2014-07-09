@@ -7,6 +7,7 @@
 //
 
 #import "DPTTextField.h"
+#import "UIColor+DPT.h"
 
 @implementation DPTTextField
 
