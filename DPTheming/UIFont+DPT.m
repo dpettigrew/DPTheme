@@ -77,6 +77,9 @@
             NSLog(@"Warning - Unsupported preferred font requested");
             break;
     }
+    if (!preferredFont) {
+        NSLog(@"Warning - font not found - %d", styleName);
+    }
     return preferredFont;
 }
 
