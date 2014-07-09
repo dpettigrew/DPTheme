@@ -38,6 +38,9 @@
         self.textAlignment = style.textAlignment.integerValue;
         self.textColor = style.color;
         self.keyboardType = UIKeyboardTypeEmailAddress;
+        UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+        self.leftView = paddingView;
+        self.leftViewMode = UITextFieldViewModeAlways;
     }
     return self;
 }
