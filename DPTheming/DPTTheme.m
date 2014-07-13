@@ -95,6 +95,7 @@
     }
     id color = _dictionary[colorNameRef];
     if (color == nil) {
+        NSLog(@"Warning theme color %@ not found in theme file", colorNameRef);
         return nil;
     }
     if ([color isKindOfClass:[NSDictionary class]]) {
