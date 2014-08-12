@@ -33,7 +33,7 @@
         [plText addAttribute:NSForegroundColorAttributeName value:style.color range:NSMakeRange(0, placeholder.length)];
         self.attributedPlaceholder = plText;
         self.font = style.font;
-        self.layer.borderColor = [UIColor dptMediumTextColor].CGColor;
+        self.layer.borderColor = style.borderColor.CGColor;
         self.layer.borderWidth = 1.0;
         self.textAlignment = style.textAlignment.integerValue;
         self.textColor = style.color;
