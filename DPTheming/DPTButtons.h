@@ -34,6 +34,6 @@
 
 @interface DPTFramedLabelViewButton : DPTFramedLabelButton
 
-- (void)configureWithNormalStyle:(DPTStyle *)normalStyle highlightedStyle:(DPTStyle *)highlightedStyle text:(NSString *)text image:(UIImage *)image;
+- (void)configureWithNormalStyle:(DPTStyle *)normalStyle highlightedStyle:(DPTStyle *)highlightedStyle text:(NSString *)text normalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage;
 
 @end

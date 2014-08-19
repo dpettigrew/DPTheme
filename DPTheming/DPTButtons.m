@@ -178,7 +178,8 @@ void strokeAndFillRect(CGContextRef c, CGRect rect) {
 
 @interface DPTFramedLabelViewButton ()
 
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UIImage *normalImage;
+@property (nonatomic, strong) UIImage *highlightedImage;
 
 @end
 
@@ -196,56 +197,56 @@ void strokeAndFillRect(CGContextRef c, CGRect rect) {
     [super awakeFromNib];
 }
 
-- (UIImage *)buttonImageWithTextColor:(UIColor *)textColor backgroundOpacity:(NSNumber *)backgroundOpacity backgroundColor:(UIColor *)backgroundColor borderColor:(UIColor *)borderColor {
-    UIView *highlightedView = [[UIView alloc] initWithFrame:self.bounds];
+- (UIImage *)buttonImageWithTextColor:(UIColor *)textColor backgroundOpacity:(NSNumber *)backgroundOpacity backgroundColor:(UIColor *)backgroundColor borderColor:(UIColor *)borderColor image:(UIImage *)image {
+    UIView *buttonView = [[UIView alloc] initWithFrame:self.bounds];
     
     // highlighted label
-    UILabel *highlightedLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    UILabel *buttonLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     UIColor *buttonBackgroundColor = backgroundColor;
     if (backgroundOpacity) {
         buttonBackgroundColor = [backgroundColor colorWithAlphaComponent:[backgroundOpacity floatValue]];
     }
-    [self configureLabel:highlightedLabel textColor:textColor backgroundColor:buttonBackgroundColor];
-    [highlightedLabel sizeToFit];
-    highlightedLabel.textAlignment = NSTextAlignmentRight;
+    [self configureLabel:buttonLabel textColor:textColor backgroundColor:buttonBackgroundColor];
+    [buttonLabel sizeToFit];
+    buttonLabel.textAlignment = NSTextAlignmentRight;
     
     // highlighted image view
-    CGFloat imageSize = highlightedLabel.frame.size.height/2.0;
-    UIImageView *highlightedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(highlightedLabel.frame.size.width + 5, imageSize/2.0, imageSize, imageSize)];
-    highlightedImageView.contentMode = UIViewContentModeScaleAspectFit;
-    highlightedImageView.image = self.image;
+    CGFloat imageSize = buttonLabel.frame.size.height/2.0;
+    UIImageView *buttonImageView = [[UIImageView alloc] initWithFrame:CGRectMake(buttonLabel.frame.size.width + 5, imageSize/2.0, imageSize, imageSize)];
+    buttonImageView.contentMode = UIViewContentModeScaleAspectFit;
+    buttonImageView.image = image;
     
-    UIView *highlightedCombinedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, highlightedLabel.frame.size.width + 5 + highlightedImageView.frame.size.width, highlightedLabel.frame.size.height)];
-    [highlightedCombinedView addSubview:highlightedLabel];
-    [highlightedCombinedView addSubview:highlightedImageView];
-    [highlightedView addSubview:highlightedCombinedView];
-    highlightedCombinedView.center = highlightedView.center;
+    UIView *combinedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, buttonLabel.frame.size.width + 5 + buttonImageView.frame.size.width, buttonLabel.frame.size.height)];
+    [combinedView addSubview:buttonLabel];
+    [combinedView addSubview:buttonImageView];
+    [buttonView addSubview:combinedView];
+    combinedView.center = buttonView.center;
     
-    highlightedView.backgroundColor = buttonBackgroundColor;
-    highlightedCombinedView.backgroundColor = buttonBackgroundColor;
+    buttonView.backgroundColor = buttonBackgroundColor;
+    combinedView.backgroundColor = buttonBackgroundColor;
     
     // add the border
     if (borderColor) {
-        highlightedView.layer.borderColor = borderColor.CGColor;
-        highlightedView.layer.borderWidth = 1.0;
+        buttonView.layer.borderColor = borderColor.CGColor;
+        buttonView.layer.borderWidth = 1.0;
     }
     // set the button highlighted state image
-    UIImage *highlightedButtonImage = [highlightedView image];
-    return highlightedButtonImage;
+    return [buttonView image];
 }
 
 - (void)configure {
-    UIImage *normalImage = [self buttonImageWithTextColor:self.normalTextColor backgroundOpacity:self.normalBackgroundOpacity backgroundColor:self.normalBackgroundColor borderColor:self.normalBorderColor];
+    UIImage *normalImage = [self buttonImageWithTextColor:self.normalTextColor backgroundOpacity:self.normalBackgroundOpacity backgroundColor:self.normalBackgroundColor borderColor:self.normalBorderColor image:self.normalImage];
     [self setImage:normalImage forState:UIControlStateNormal];
-    UIImage *highlightedImage = [self buttonImageWithTextColor:self.highlightedTextColor backgroundOpacity:self.highlightedBackgroundOpacity backgroundColor:self.highlightedBackgroundColor borderColor:self.highlightedBorderColor];
+    UIImage *highlightedImage = [self buttonImageWithTextColor:self.highlightedTextColor backgroundOpacity:self.highlightedBackgroundOpacity backgroundColor:self.highlightedBackgroundColor borderColor:self.highlightedBorderColor image:self.highlightedImage];
     [self setImage:highlightedImage forState:UIControlStateHighlighted];
     self.accessibilityLabel = self.text;
     [self setTitle:@"" forState:UIControlStateNormal];
 }
 
-- (void)configureWithNormalStyle:(DPTStyle *)normalStyle highlightedStyle:(DPTStyle *)highlightedStyle text:(NSString *)text image:(UIImage *)image {
+- (void)configureWithNormalStyle:(DPTStyle *)normalStyle highlightedStyle:(DPTStyle *)highlightedStyle text:(NSString *)text normalImage:(UIImage *)normalImage highlightedImage:(UIImage *)highlightedImage {
     [super configureWithNormalStyle:normalStyle highlightedStyle:highlightedStyle text:text];
-    self.image = image;
+    self.highlightedImage = highlightedImage;
+    self.normalImage = normalImage;
     [self configure];
 }
 
