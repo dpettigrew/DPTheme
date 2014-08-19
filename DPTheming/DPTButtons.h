@@ -10,23 +10,30 @@
 
 @class DPTStyle;
 
-@interface DPTSolidButton : UIButton
-
-@property (nonatomic, copy) NSString *text;
-@property (nonatomic, strong) UIFont *font;
+@interface DPTFramedButton : UIButton
 
 @property (nonatomic, strong) UIColor *normalBackgroundColor;
 @property (nonatomic, strong) UIColor *normalBorderColor;
 @property (nonatomic, strong) UIColor *normalTextColor;
 @property (nonatomic, strong) NSNumber *normalBackgroundOpacity;
+@property (nonatomic, strong) UIImage *normalImage;
 
 @property (nonatomic, strong) UIColor *highlightedBackgroundColor;
 @property (nonatomic, strong) UIColor *highlightedBorderColor;
 @property (nonatomic, strong) UIColor *highlightedTextColor;
 @property (nonatomic, strong) NSNumber *highlightedBackgroundOpacity;
+@property (nonatomic, strong) UIImage *highlightedImage;
 
-- (void)configure; // call after setting the above properties
+@end
+
+@interface DPTFramedLabelButton : DPTFramedButton
 
 - (void)configureWithNormalStyle:(DPTStyle *)normalStyle highlightedStyle:(DPTStyle *)highlightedStyle text:(NSString *)text;
+
+@end
+
+@interface DPTFramedLabelViewButton : DPTFramedLabelButton
+
+- (void)configureWithNormalStyle:(DPTStyle *)normalStyle highlightedStyle:(DPTStyle *)highlightedStyle text:(NSString *)text image:(UIImage *)image;
 
 @end

@@ -10,7 +10,7 @@
 #import "DPTLabels.h"
 #import "UIFont+DPT.h"
 #import "DPTStyle.h"
-#import "DPTSolidButton.h"
+#import "DPTButtons.h"
 #import "DPTTextField.h"
 #import "DPTThemeManager.h"
 
