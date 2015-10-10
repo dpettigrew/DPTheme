@@ -93,17 +93,6 @@ void strokeAndFillRect(CGContextRef c, CGRect rect) {
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, strong) UIFont *font;
 
-@property (nonatomic, strong) UIColor *normalBackgroundColor;
-@property (nonatomic, strong) UIColor *normalBorderColor;
-@property (nonatomic, strong) UIColor *normalTextColor;
-@property (nonatomic, strong) NSNumber *normalBackgroundOpacity;
-@property (nonatomic, strong) UIImage *normalImage;
-
-@property (nonatomic, strong) UIColor *highlightedBackgroundColor;
-@property (nonatomic, strong) UIColor *highlightedBorderColor;
-@property (nonatomic, strong) UIColor *highlightedTextColor;
-@property (nonatomic, strong) NSNumber *highlightedBackgroundOpacity;
-
 @end
 
 @implementation DPTFramedLabelButton

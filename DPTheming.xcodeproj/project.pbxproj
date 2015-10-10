@@ -33,6 +33,10 @@
 		638FE346185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 		638FE347185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 		63D7C1F0188A02E0001AA88A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63D7C1EF188A02E0001AA88A /* README.md */; };
+		DB7DF3101BC97E28006CF585 /* DPTButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF3081BC97E28006CF585 /* DPTButtons.m */; settings = {ASSET_TAGS = (); }; };
+		DB7DF3111BC97E28006CF585 /* DPTStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30B1BC97E28006CF585 /* DPTStyle.m */; settings = {ASSET_TAGS = (); }; };
+		DB7DF3121BC97E28006CF585 /* DPTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30D1BC97E28006CF585 /* DPTTextField.m */; settings = {ASSET_TAGS = (); }; };
+		DB7DF3131BC97E28006CF585 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30F1BC97E28006CF585 /* UIView+Utils.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,15 @@
 		638FE344185698FE004B2A5F /* DPTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTTheme.h; sourceTree = "<group>"; };
 		638FE345185698FE004B2A5F /* DPTTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTTheme.m; sourceTree = "<group>"; };
 		63D7C1EF188A02E0001AA88A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		DB7DF3071BC97E28006CF585 /* DPTButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTButtons.h; sourceTree = "<group>"; };
+		DB7DF3081BC97E28006CF585 /* DPTButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTButtons.m; sourceTree = "<group>"; };
+		DB7DF3091BC97E28006CF585 /* DPTPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTPack.h; sourceTree = "<group>"; };
+		DB7DF30A1BC97E28006CF585 /* DPTStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTStyle.h; sourceTree = "<group>"; };
+		DB7DF30B1BC97E28006CF585 /* DPTStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTStyle.m; sourceTree = "<group>"; };
+		DB7DF30C1BC97E28006CF585 /* DPTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTTextField.h; sourceTree = "<group>"; };
+		DB7DF30D1BC97E28006CF585 /* DPTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTTextField.m; sourceTree = "<group>"; };
+		DB7DF30E1BC97E28006CF585 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		DB7DF30F1BC97E28006CF585 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +119,15 @@
 		6330FEF21857A8B5009C3ADB /* Theming */ = {
 			isa = PBXGroup;
 			children = (
+				DB7DF3071BC97E28006CF585 /* DPTButtons.h */,
+				DB7DF3081BC97E28006CF585 /* DPTButtons.m */,
+				DB7DF3091BC97E28006CF585 /* DPTPack.h */,
+				DB7DF30A1BC97E28006CF585 /* DPTStyle.h */,
+				DB7DF30B1BC97E28006CF585 /* DPTStyle.m */,
+				DB7DF30C1BC97E28006CF585 /* DPTTextField.h */,
+				DB7DF30D1BC97E28006CF585 /* DPTTextField.m */,
+				DB7DF30E1BC97E28006CF585 /* UIView+Utils.h */,
+				DB7DF30F1BC97E28006CF585 /* UIView+Utils.m */,
 				638FE32D18564E9E004B2A5F /* DPTThemeManager.h */,
 				638FE32E18564E9E004B2A5F /* DPTThemeManager.m */,
 				638FE33118568ED1004B2A5F /* DPTLabels.m */,
@@ -241,7 +263,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DPT;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Pettigrew";
 				TargetAttributes = {
 					638FE31518564E43004B2A5F = {
@@ -297,11 +319,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				638FE33B18568FDC004B2A5F /* UIColor+DPT.m in Sources */,
+				DB7DF3101BC97E28006CF585 /* DPTButtons.m in Sources */,
+				DB7DF3111BC97E28006CF585 /* DPTStyle.m in Sources */,
 				638FE33D18568FDC004B2A5F /* UIFont+DPT.m in Sources */,
 				638FE346185698FE004B2A5F /* DPTTheme.m in Sources */,
 				638FE32F18564E9E004B2A5F /* DPTThemeManager.m in Sources */,
+				DB7DF3131BC97E28006CF585 /* UIView+Utils.m in Sources */,
 				6330FF7C1858EF39009C3ADB /* DPTViewController.m in Sources */,
 				6330FF7A1858EF39009C3ADB /* DPTAppDelegate.m in Sources */,
+				DB7DF3121BC97E28006CF585 /* DPTTextField.m in Sources */,
 				6330FF7F1858EF39009C3ADB /* main.m in Sources */,
 				638FE33318568ED1004B2A5F /* DPTLabels.m in Sources */,
 			);
@@ -362,7 +388,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -377,6 +402,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -401,7 +427,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -438,6 +463,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DPTheming/Sample/DPTheming-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DPTheming/Sample/DPTheming-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidpettigrew.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -451,6 +477,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DPTheming/Sample/DPTheming-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DPTheming/Sample/DPTheming-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidpettigrew.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,7 +486,6 @@
 		638FE32B18564E43004B2A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DPTheming.app/DPTheming";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -473,6 +499,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "DPThemingTests/DPThemingTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidpettigrew.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -482,7 +509,6 @@
 		638FE32C18564E43004B2A5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DPTheming.app/DPTheming";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -492,6 +518,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DPTheming/DPTheming-Prefix.pch";
 				INFOPLIST_FILE = "DPThemingTests/DPThemingTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidpettigrew.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
