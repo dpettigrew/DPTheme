@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "62D409D7307842DA7C12E4CE576E4AD349E835BD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CC7BCAD272090E1E5872D196B0248A1FA809436A" : 0,
+    "62D409D7307842DA7C12E4CE576E4AD349E835BD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "966DAC53-3521-4694-9781-59A5ADA788F3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CC7BCAD272090E1E5872D196B0248A1FA809436A" : "..",
+    "62D409D7307842DA7C12E4CE576E4AD349E835BD" : "DPTheme\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DPTheming",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DPTheming.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dpettigrew\/DPTheme.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "62D409D7307842DA7C12E4CE576E4AD349E835BD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:dpettigrew\/toppods-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CC7BCAD272090E1E5872D196B0248A1FA809436A"
+    }
+  ]
+}
