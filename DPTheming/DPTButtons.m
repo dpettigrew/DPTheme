@@ -167,9 +167,6 @@ void strokeAndFillRect(CGContextRef c, CGRect rect) {
 
 @interface DPTFramedLabelViewButton ()
 
-@property (nonatomic, strong) UIImage *normalImage;
-@property (nonatomic, strong) UIImage *highlightedImage;
-
 @end
 
 @implementation DPTFramedLabelViewButton
