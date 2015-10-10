@@ -56,11 +56,28 @@
     }
 }
 
-+ (instancetype)initializeThemeManagerWithThemeNamed:(NSString *)themeName appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock{
++ (instancetype)initializeSharedThemeManagerWithThemeNamed:(NSString *)themeName appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock {
     DPTThemeManager *sharedDPTThemeManager = [DPTThemeManager sharedDPTThemeManager];
     DPTTheme *theme = [sharedDPTThemeManager getThemeNamed:themeName];
     [sharedDPTThemeManager setCurrentTheme:theme appearanceProxySetup:appearanceProxySetupBlock];
     return sharedDPTThemeManager;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _themes = [NSMutableDictionary new];
+    }
+    return self;
+}
+
+- (instancetype)initWithTheme:(NSString *)themeName appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock {
+    self = [self init];
+    if (self) {
+        DPTTheme *theme = [self getThemeNamed:themeName];
+        [self setCurrentTheme:theme appearanceProxySetup:appearanceProxySetupBlock];
+    }
+    return self;
 }
 
 + (instancetype)sharedDPTThemeManager {
@@ -72,14 +89,6 @@
     });
     
     return sharedDPTThemeManager;
-}
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        _themes = [NSMutableDictionary new];
-    }
-    return self;
 }
 
 - (DPTTheme *)currentTheme {

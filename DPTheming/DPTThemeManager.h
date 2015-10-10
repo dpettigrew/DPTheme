@@ -13,7 +13,9 @@ static NSString * const kDPTThemeManagerSchemeChangedNotification = @"DPTThemeMa
 
 @interface DPTThemeManager : NSObject
 
-+ (instancetype)initializeThemeManagerWithThemeNamed:(NSString *)themeName appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock;
+- (instancetype)initWithTheme:(NSString *)themeName appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock;
+
++ (instancetype)initializeSharedThemeManagerWithThemeNamed:(NSString *)themeName appearanceProxySetup:(void (^)(void))appearanceProxySetupBlock;
 + (instancetype)sharedDPTThemeManager;
 
 - (UIColor *)backgroundColorForTheme:(NSString *)themeName;
