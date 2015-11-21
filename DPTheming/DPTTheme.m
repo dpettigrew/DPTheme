@@ -190,10 +190,10 @@
         return UIStatusBarStyleLightContent;
     }
     else if ([statusBarStyle isEqualToString:@"UIStatusBarStyleBlackTranslucent"]) {
-        return UIStatusBarStyleBlackTranslucent;
+        return UIStatusBarStyleLightContent;
     }
     else if ([statusBarStyle isEqualToString:@"UIStatusBarStyleBlackOpaque"]) {
-        return UIStatusBarStyleBlackOpaque;
+        return UIStatusBarStyleLightContent;
     }
     return UIStatusBarStyleDefault;
 }
