@@ -80,6 +80,7 @@ static NSString * const kDPTStatusBarStyle = @"StatusBarStyle";
 
 // Generic accessors for color, font and font size.
 - (UIColor *)colorForNameRef:(NSString *)colorNameRef;
+- (NSString *)cssStringForNameRef:(NSString *)colorNameRef;
 - (NSString *)fontNameForFontNameRef:(NSString *)fontNameRef;
 - (CGFloat)fontSizeForFontSizeRef:(NSString *)fontSizeRef;
 

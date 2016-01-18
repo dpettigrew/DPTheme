@@ -52,11 +52,21 @@
     [scanner scanHexInt:&greenVal];
     scanner = [NSScanner scannerWithString:blueStr];
     [scanner scanHexInt:&blueVal];
-    
+
+    if (hexColorString.length > 6) {
+        NSString *alphaStr = [hexColorString substringWithRange:NSRangeFromString(@"{6, 2}")];
+        scanner = [NSScanner scannerWithString:alphaStr];
+        unsigned alphaVal;
+        [scanner scanHexInt:&alphaVal];
+        rgba.alpha = alphaVal;
+    }
+    else {
+        rgba.alpha = 1.0;
+    }
+
     rgba.red = redVal;
     rgba.green = greenVal;
     rgba.blue = blueVal;
-    rgba.alpha = 1.0;
     return rgba;
 }
 
@@ -115,6 +125,32 @@
         
         RGBAColor rgba = [self RGBAColorFromHexString:colorStr];
         return [self colorWithRGBAColor:rgba];
+    }
+    else {
+        return nil;
+    }
+}
+
+- (NSString *)cssStringForNameRef:(NSString *)colorNameRef {
+    if (!colorNameRef) {
+        return nil;
+    }
+    id color = _dictionary[colorNameRef];
+    if (color == nil) {
+        NSLog(@"Warning theme color %@ not found in theme file", colorNameRef);
+        return nil;
+    }
+    if ([color isKindOfClass:[NSString class]]) {
+        if (((NSString *)color).length < 6) {
+            NSLog(@"Failed to parse color string - %@", color);
+            return nil;
+        }
+        NSString *colorStr = color;
+        if (colorStr.length == 7) {
+            // #fefefe format
+            colorStr = [color substringFromIndex:1];
+        }
+        return colorStr;
     }
     else {
         return nil;
