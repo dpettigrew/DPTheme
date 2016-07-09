@@ -33,10 +33,10 @@
 		638FE346185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 		638FE347185698FE004B2A5F /* DPTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 638FE345185698FE004B2A5F /* DPTTheme.m */; };
 		63D7C1F0188A02E0001AA88A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63D7C1EF188A02E0001AA88A /* README.md */; };
-		DB7DF3101BC97E28006CF585 /* DPTButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF3081BC97E28006CF585 /* DPTButtons.m */; settings = {ASSET_TAGS = (); }; };
-		DB7DF3111BC97E28006CF585 /* DPTStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30B1BC97E28006CF585 /* DPTStyle.m */; settings = {ASSET_TAGS = (); }; };
-		DB7DF3121BC97E28006CF585 /* DPTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30D1BC97E28006CF585 /* DPTTextField.m */; settings = {ASSET_TAGS = (); }; };
-		DB7DF3131BC97E28006CF585 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30F1BC97E28006CF585 /* UIView+Utils.m */; settings = {ASSET_TAGS = (); }; };
+		DB7DF3101BC97E28006CF585 /* DPTButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF3081BC97E28006CF585 /* DPTButtons.m */; };
+		DB7DF3111BC97E28006CF585 /* DPTStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30B1BC97E28006CF585 /* DPTStyle.m */; };
+		DB7DF3121BC97E28006CF585 /* DPTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30D1BC97E28006CF585 /* DPTTextField.m */; };
+		DB7DF3131BC97E28006CF585 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7DF30F1BC97E28006CF585 /* UIView+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,7 +266,11 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Pettigrew";
 				TargetAttributes = {
+					638FE2F418564E42004B2A5F = {
+						LastSwiftMigration = 0800;
+					};
 					638FE31518564E43004B2A5F = {
+						LastSwiftMigration = 0800;
 						TestTargetID = 638FE2F418564E42004B2A5F;
 					};
 				};
@@ -465,6 +469,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/DPTheming/Sample/DPTheming-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidpettigrew.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -479,6 +484,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/DPTheming/Sample/DPTheming-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidpettigrew.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -501,6 +507,7 @@
 				INFOPLIST_FILE = "DPThemingTests/DPThemingTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidpettigrew.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -520,6 +527,7 @@
 				INFOPLIST_FILE = "DPThemingTests/DPThemingTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidpettigrew.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
